@@ -34,7 +34,6 @@
                     </tr>
                 </tbody>
             </table>
-            123123
             <s:property value="error"/>
             <input type="submit" value="OK" name="OK" </input>
         </s:form>

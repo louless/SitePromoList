@@ -44,7 +44,7 @@ public class CheckLogin {
 
     private boolean CheckEmpty() {
         boolean result = true;
-        result = (userLogin.isEmpty()) || (userPass.isEmpty());
+        result = ((userLogin == null) || (userPass == null) || (userLogin.isEmpty()) || (userPass.isEmpty()));
         return result;
     }
 
