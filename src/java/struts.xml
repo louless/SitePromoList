@@ -7,7 +7,7 @@
     
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">       
-        <action name="LoginForm" class="Actions.LoginAction" method="doLogin">
+        <action name="LoginForm" class="Actions.LoginAction" method="doLogin" >
             <result name="main">/jsps/main.jsp</result>
             <result name="login">/jsps/login.jsp</result>      
         </action>

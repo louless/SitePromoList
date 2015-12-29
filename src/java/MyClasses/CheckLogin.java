@@ -7,22 +7,23 @@ package MyClasses;
 /**
  *
  * @author VGLukin класс для проверки корректности пользователя переменные
- * userLogin и userPass заносятся на login.jsp
+ * userLogin и userPass заносятся login.jsp
  */
 public class CheckLogin {
-
     private String userLogin;
     private String userPass;
-    private String error = "";
+    private String error;
 
-    static public boolean execute() {
-        boolean result = false;
+    static public boolean execute(String login, String pass) {
+        boolean result;      
         CheckLogin checkLogin = new CheckLogin();
-        result = checkLogin.doCheckLogin();
+        checkLogin.setUserLogin(login);
+        checkLogin.setUserPass(pass);
+        result = checkLogin.authenticate();
         return result;
     }
 
-    public boolean doCheckLogin() {
+    public boolean authenticate() {
         final String LoginDefault = "user";
         final String PassDefault = "13";
         boolean result;
@@ -39,6 +40,7 @@ public class CheckLogin {
                 System.out.println(error);
             }
         }
+     
         return result;
     }
 

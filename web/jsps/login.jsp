@@ -14,7 +14,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <s:form name="LoginForm" action="LoginForm" method="doLogin">
+        <s:form name="LoginForm" action="LoginForm" method="doLogin" >
             <table border="0" cellspacing="2" >
                 <thead>
                     <tr >Введите свои данные </tr>
@@ -23,19 +23,22 @@
                     <tr>
                         <td>Введите имя пользователя:</td>
                         <td>
-                            <input type="text" name="userLogin" value="" </input> 
+                            <input type="text" name="userLogin" </input> 
                         </td>
                     </tr>
                     <tr>
                         <td>Введите пароль:</td>
                         <td>
-                            <input type="password" name="userPass" value="" </input> 
+                            <input type="password" name="userPass" </input> 
                         </td>
                     </tr>
                 </tbody>
             </table>
             <s:property value="error"/>
-            <input type="submit" value="OK" name="OK" </input>
+            <input type="submit" value="OK" name=" OK" </input>
         </s:form>
+    <%--    <jsp:useBean class="MyClasses.CheckLogin" id="error" scope="request"/> --%>
+        
+        <s:property value="error"/>    
     </body>
 </html>
