@@ -14,31 +14,25 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <s:form name="LoginForm" action="LoginForm" method="doLogin" >
+        <s:form name="LoginForm" action="LoginForm" method="post" >
             <table border="0" cellspacing="2" >
                 <thead>
                     <tr >Введите свои данные </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Введите имя пользователя:</td>
-                        <td>
-                            <input type="text" name="userLogin" </input> 
-                        </td>
+                            <s:textfield label="Введите имя пользователя:" key="userLogin"/> 
+                            <%--<input type="text" name="userLogin" key="userLogin"</input> --%>
                     </tr>
                     <tr>
-                        <td>Введите пароль:</td>
-                        <td>
-                            <input type="password" name="userPass" </input> 
-                        </td>
+                            <s:password label="Введите пароль:" key="userPass"/>
+<!--                            <input type="password" name="userPass" key="userPass"</input> -->
                     </tr>
                 </tbody>
             </table>
-            <s:property value="error"/>
             <input type="submit" value="OK" name=" OK" </input>
         </s:form>
     <%--    <jsp:useBean class="MyClasses.CheckLogin" id="error" scope="request"/> --%>
-        
-        <s:property value="error"/>    
+    <s:property value="error"/>    
     </body>
 </html>

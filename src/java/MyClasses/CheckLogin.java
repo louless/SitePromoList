@@ -14,16 +14,12 @@ public class CheckLogin {
     private String userPass;
     private String error;
 
-    static public boolean execute(String login, String pass) {
-        boolean result;      
-        CheckLogin checkLogin = new CheckLogin();
-        checkLogin.setUserLogin(login);
-        checkLogin.setUserPass(pass);
-        result = checkLogin.authenticate();
+    public boolean execute() {   
+        boolean result = authenticate();
         return result;
     }
 
-    public boolean authenticate() {
+    private boolean authenticate() {
         final String LoginDefault = "user";
         final String PassDefault = "13";
         boolean result;

@@ -12,8 +12,7 @@ public class User {
     private int userID;
     private String userName;
     private String userPass;
-    
-    
+       
     public int getUserID() {
         return userID;
     }
@@ -31,8 +30,5 @@ public class User {
     }
     public void setUserPass(String userPass) {
         this.userPass = userPass;
-    }
-    
-    
-    
+    }  
 }

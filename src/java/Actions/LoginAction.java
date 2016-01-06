@@ -14,22 +14,22 @@ import com.opensymphony.xwork2.ModelDriven;
  */
 public class LoginAction extends ActionSupport implements ModelDriven<CheckLogin>{
 
-    private static final String MAINPAGE = "main";
-    private static final String LOGINPAGE = "login";
-    private CheckLogin checkLogin;
-    private String userLogin;
-    private String userPass;
+    private CheckLogin checkLogin = new CheckLogin();
 
-    public String doLogin() throws Exception {
+    @Override
+    public String execute() throws Exception {
         boolean isUserCorrect = false;    
         // проверка логин/пароль
-        isUserCorrect = CheckLogin.execute(userLogin, userPass);
+            System.out.println("userPass=" + checkLogin.getUserPass());
+            System.out.println("userLogin=" + checkLogin.getUserLogin());        
+        isUserCorrect = checkLogin.execute();
         
         if (isUserCorrect) {
-            return MAINPAGE;
+            return SUCCESS;
         } else {  
-            checkLogin.setError("Error value(s). Try again");
-            return LOGINPAGE;
+            System.out.println("error=" + checkLogin.getError());
+            System.out.println("userLogin=" + checkLogin.getUserLogin());
+            return LOGIN;
         }
     }
 
@@ -37,22 +37,4 @@ public class LoginAction extends ActionSupport implements ModelDriven<CheckLogin
     public CheckLogin getModel() {
         return checkLogin;
     }
-    
-    
-    public String getUserLogin() {
-        return userLogin;
-    }
-
-    public void setUserLogin(String userLogin) {
-        this.userLogin = userLogin;
-    }
-
-    public String getUserPass() {
-        return userPass;
-    }
-
-    public void setUserPass(String userPass) {
-        this.userPass = userPass;
-    }
-    
 }
