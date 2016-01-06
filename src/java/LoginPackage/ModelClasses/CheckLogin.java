@@ -1,8 +1,8 @@
-/*
+/**
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package MyClasses;
+package LoginPackage.ModelClasses;
 
 /**
  *
@@ -10,34 +10,42 @@ package MyClasses;
  * userLogin и userPass заносятся login.jsp
  */
 public class CheckLogin {
+
     private String userLogin;
     private String userPass;
     private String error;
 
-    public boolean execute() {   
+    public boolean execute() {
         boolean result = authenticate();
         return result;
     }
 
     private boolean authenticate() {
-        final String LoginDefault = "user";
-        final String PassDefault = "13";
         boolean result;
-        
+
+        error = "";
         result = false;
         if (CheckEmpty()) {
-            error = "Одно или несколько полей не заполнены";
-            System.out.println(error);
+            error = "Одно или несколько полей не заполнены(логин/пароль)";
         } else {
-            if ((userLogin.equals(LoginDefault)) && (userPass.equals(PassDefault))) {
-                result = true;
-            } else {
-                error = "Неверный логин/пароль";
-                System.out.println(error);
+            if (searchUser(userLogin, userPass)) {
+                return true;
+            }else{
+                error = "Неверный логин или пароль";
             }
         }
-     
+        System.out.println(error);
         return result;
+    }
+
+    private boolean searchUser(String login, String pass) {
+        final String LoginDefault = "adm";
+        final String PassDefault = "13";
+        if ((login.equals(LoginDefault)) && (pass.equals(PassDefault))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private boolean CheckEmpty() {

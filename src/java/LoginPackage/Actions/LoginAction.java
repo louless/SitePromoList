@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Actions;
+package LoginPackage.Actions;
 
-import MyClasses.CheckLogin;
+import LoginPackage.ModelClasses.CheckLogin;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -19,15 +19,12 @@ public class LoginAction extends ActionSupport implements ModelDriven<CheckLogin
     @Override
     public String execute() throws Exception {
         boolean isUserCorrect = false;    
-        // проверка логин/пароль
-            System.out.println("userPass=" + checkLogin.getUserPass());
-            System.out.println("userLogin=" + checkLogin.getUserLogin());        
+        // проверка логин/пароль       
         isUserCorrect = checkLogin.execute();
         
         if (isUserCorrect) {
             return SUCCESS;
         } else {  
-            System.out.println("error=" + checkLogin.getError());
             System.out.println("userLogin=" + checkLogin.getUserLogin());
             return LOGIN;
         }
