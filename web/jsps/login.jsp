@@ -11,7 +11,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
+        <title>Welcome to login</title>
     </head>
     <body>
         <s:form name="LoginForm" action="LoginForm" method="post" >
@@ -21,18 +22,18 @@
                 </thead>
                 <tbody>
                     <tr>
-                            <s:textfield label="Введите имя пользователя:" key="userLogin"/> 
-                            <%--<input type="text" name="userLogin" key="userLogin"</input> --%>
+                        <s:textfield label="Введите имя пользователя:" key="userLogin"/> 
+                        <%--<input type="text" name="userLogin" key="userLogin"</input> --%>
                     </tr>
                     <tr>
-                            <s:password label="Введите пароль:" key="userPass"/>
-<!--                            <input type="password" name="userPass" key="userPass"</input> -->
+                        <s:password label="Введите пароль:" key="userPass"/>
+                        <!--                            <input type="password" name="userPass" key="userPass"</input> -->
                     </tr>
                 </tbody>
             </table>
-            <input type="submit" value="OK" name=" OK" </input>
+            <input type="submit" value="Войти" name="OK" </input>
         </s:form>
-    <%--    <jsp:useBean class="MyClasses.CheckLogin" id="error" scope="request"/> --%>
-    <s:property value="error"/>    
+        <%--    <jsp:useBean class="MyClasses.CheckLogin" id="error" scope="request"/> --%>
+        <s:property value="error"/>    
     </body>
 </html>
