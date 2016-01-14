@@ -24,13 +24,20 @@ h1 {
     font-weight: normal;
     width: 450px;
 }
-
+/*
 table {
     width: 580px;
     padding: 10px;
     background-color: #c5e7e0;
     margin: auto;
+}
+*/
 
+.style-table-login {
+    width: 400px;
+    padding: 10px;
+    background-color: #c5e7e0;
+    margin: auto;
 }
 
 th {
@@ -53,16 +60,39 @@ a:link:hover {
     font-weight: normal;
     text-decoration: underline;
 }
-.style-table{
-    table {
-        width: 580px;
-        padding: 10px;
-        background-color: #ace5ee;
-        margin: auto;
-        text-align: center;
+.style-text-center{   
 
-    }  
-
-
+    padding: 10px;
+    background-color: #ace5ee;
+    margin: auto;
+    text-align: center;
 }
+
+.style-table{        
+        padding: 10px;
+        background-color: #c5e7e0;       
+        margin: auto;
+        
+    
+}
+
+.not-used{
+background-color: #c5e7e0;
+}
+
+.level-sub-footer {
+    width: 100%;
+    height: 40px;
+    background-color: #222;
+}
+
+.sub-footer2 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+}
+
+
+
 

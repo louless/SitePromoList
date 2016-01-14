@@ -13,17 +13,57 @@
         <title>Welcome for you!</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="style-table">
+               <s:form name="login" action="login">
+                            <s:submit value="Войти"/>
+                        </s:form>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <h1>МЕНЮ</h1>   
+                    </td>
+                    <td> 
+                        <h1>Содержание</h1>                   
+                    </td>
+                    <td> 
+                        <h1>Реклама</h1>                   
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>       </td>
+                    <td> </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+             <%--        ${pageContext.request.contextPath}/jsps/testDB.jsp--%>
+                        <s:form name="testDataBase" action="/jsps/testDB.jsp">
+                            <s:submit value="тест соединения БД"/>
+                        </s:form>
+                    </td>
+                </tr>                
+   
+            </tbody>
+
+        </table>
+        </div>
+    <td>
+        <div class="style-text-center">         
+            <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
+            <p/> <br> 2016
+
+        </div>     
+    </td>
 
 
 
-        <s:form name="login" action="login">
-            <s:submit value="Войти"/>
-        </s:form>
-       ${pageContext.request.contextPath}/jsps/testDB.jsp
-       <s:form name="testDataBase" action="/jsps/testDB.jsp">
-       <s:submit value="тест соединения БД"/>
-       </s:form>
-     
-    </body>
+
+
+</body>
 </html>

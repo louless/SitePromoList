@@ -15,18 +15,19 @@
         <title>Welcome to login</title>
     </head>
     <body>
+        <div class="style-table-login"> 
         <s:form name="LoginForm" action="LoginForm" method="post" >
             <table border="0" cellspacing="2" >
-                 <!--<div class="style-table">-->
+                <!--<div class="style-table">-->
                 <thead >    
                     <tr>
                         <th>
-                             Введите свои данные       
+                            Введите свои данные       
                         </th>
                     </tr>
-                       
+
                 </thead>
-                 <!--</div>--> 
+                <!--</div>--> 
                 <tbody>
                     <tr> 
                         <s:textfield label="Введите имя пользователя:" key="userLogin"/>              
@@ -39,12 +40,14 @@
                         <td><input type="submit" value="Войти" name="OK" </input> 
                         </td>
                     </tr>
-
+                    <tr>
+                        <td>
+                            <s:property value="error"/>         
+                        </td>
+                    </tr>
                 </tbody>
             </table>
-
-        </s:form>
-
-        <s:property value="error"/>           
+        </s:form> 
+        </div>
     </body>
 </html>
