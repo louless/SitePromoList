@@ -29,7 +29,7 @@
     </select>
         
             <sql:query var="result" dataSource="jdbc/userdb">
-                SELECT userid, username FROM userlist
+                SELECT iduser, username FROM userlist
             </sql:query>
     
             <table border="1">
