@@ -68,13 +68,22 @@ a:link:hover {
     text-align: center;
 }
 
+.style-text-right{      
+    padding: 10px;
+    background-color: #ace5ee;
+    margin: auto;
+    text-align: right;    
+}
+
+
 .style-table{        
         padding: 10px;
         background-color: #c5e7e0;       
-        margin: auto;
-        
-    
+        margin: auto;   
 }
+
+
+
 
 .not-used{
 background-color: #c5e7e0;
