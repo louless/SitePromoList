@@ -35,5 +35,7 @@
         </s:form>
         <%--    <jsp:useBean class="MyClasses.CheckLogin" id="error" scope="request"/> --%>
         <s:property value="error"/>    
+        
+        
     </body>
 </html>
