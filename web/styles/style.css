@@ -13,6 +13,7 @@ body {
     font-size: smaller;
     padding: 50px;
     color: #555;
+    margin: auto;
 }
 
 h1 {
@@ -28,6 +29,8 @@ table {
     width: 580px;
     padding: 10px;
     background-color: #c5e7e0;
+    margin: auto;
+
 }
 
 th {
@@ -40,13 +43,26 @@ td {
 }
 
 a:link {
-   color: #be7429;
-   font-weight: normal;
-   text-decoration: none;
+    color: #be7429;
+    font-weight: normal;
+    text-decoration: none;
 }
 
 a:link:hover {
-   color: #be7429;
-   font-weight: normal;
-   text-decoration: underline;
+    color: #be7429;
+    font-weight: normal;
+    text-decoration: underline;
 }
+.style-table{
+    table {
+        width: 580px;
+        padding: 10px;
+        background-color: #ace5ee;
+        margin: auto;
+        text-align: center;
+
+    }  
+
+
+}
+
