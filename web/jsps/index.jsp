@@ -13,14 +13,33 @@
         <title>Welcome for you!</title>
     </head>
     <body>
-        <div class="style-text-right">
-          <s:form name="login" action="login">
-            <s:submit value="Войти"/>
-          </s:form>            
+        <div class="style-table-right">   
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                    <s:form name="testDataBase" action="/jsps/testDB.jsp"> 
+                         <s:submit value="тест соединения БД"/>
+                    </s:form>                        
+                    </td>                       
+                    <td>
+                    <s:form name="login" action="login"> 
+                       <s:submit value="Войти"/>
+                    </s:form>  
+                    </td>                    
+                </tr>
+            </tbody>
+        </table>           
+          <%--        ${pageContext.request.contextPath}/jsps/testDB.jsp--%> 
         </div>
         <div class="style-table">
         <table>
             <thead>
+                <tr>
+                    <jsp:text> На этом ресурсе можно узнать основные (самые популярные) 
+                        сайты в интернете, разбитые по категориям для удобства
+                    </jsp:text>
+                </tr>
                 <tr>
                     <td>
                         <h1>МЕНЮ</h1>   
@@ -42,10 +61,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>             <%--        ${pageContext.request.contextPath}/jsps/testDB.jsp--%>
-                        <s:form name="testDataBase" action="/jsps/testDB.jsp">
-                            <s:submit value="тест соединения БД"/>
-                        </s:form></td>
+                    <td> </td>
                     <td></td>
                     <td>
 
