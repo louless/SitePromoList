@@ -52,14 +52,8 @@
                     </tbody>
                 </table>
             </div>
-
-            <div class="style-text-center">         
-                <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
-                <p/> <br> 2016
-
-            </div>     
         </div>
-
+        <jsp:include page="partjsp/bottom.jsp"/>
 
 
 
