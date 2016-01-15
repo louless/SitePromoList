@@ -15,6 +15,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="${pageContext.request.contextPath}/styles/style.css" type="text/css" rel="stylesheet"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>

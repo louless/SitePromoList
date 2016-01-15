@@ -14,7 +14,7 @@ body {
     padding: 50px;
     color: #555;
     margin: auto;
-    background-color: #ace5ee;
+    background-color: #c5e7e0;
 }
 
 h1 {
@@ -37,7 +37,7 @@ table {
 .style-table-login {
     width: 400px;
     padding: 10px;
-    background-color: #c5e7e0;
+    background-color: #ace5ee;
     margin: auto;
 }
 
@@ -71,28 +71,12 @@ a:link:hover {
 table{ 
     width: 33%;
     padding: 10px;
-    background-color: #ace5ee;
     text-align: right;
-    margin-left: auto;
-   
-    
-    
+    margin-left: auto;    
 }
-/*
-<div style="text-align:right;">
- 
-<table border="1" style=" display:inline-block; background:pink; width:33%;" cellpadding="0" cellspacing="0">
-<tr><td style=" text-align:left;">
-fffffffffff
-</td></tr></table>
- 
-</div>
-<div style=" background:red;">dddddddddddd</div>
-*/
-
 .style-table{        
         padding: 10px;
-        background-color: #c5e7e0;       
+        background-color: #ace5ee;       
         margin: auto;  
         
 }
