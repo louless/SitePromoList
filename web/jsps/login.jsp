@@ -14,40 +14,40 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
         <title>Welcome to login</title>
     </head>
-    <body>
+    <body>        
+        <jsp:include page="/partjsp/topmenu.jsp" />
+        
         <div class="style-table-login"> 
-        <s:form name="LoginForm" action="LoginForm" method="post" >
-            <table border="0" cellspacing="2" >
-                <!--<div class="style-table">-->
-                <thead >    
-                    <tr>
-                        <th>
-                            Введите свои данные       
-                        </th>
-                    </tr>
-
-                </thead>
-                <!--</div>--> 
-                <tbody>
-                    <tr> 
-                        <s:textfield label="Введите имя пользователя:" key="userLogin"/>              
-                    </tr>
-                    <tr>
-                        <s:password label="Введите пароль:" key="userPass"/>           
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit" value="Войти" name="OK" </input> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <s:property value="error"/>         
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </s:form> 
+            <s:form name="LoginForm" action="LoginForm" method="post" >
+                <table border="0" cellspacing="2" >
+                    <!--<div class="style-table">-->
+                    <thead >    
+                        <tr>
+                            <th>  Введите свои данные        </th>
+                        </tr>
+                    </thead>
+                    <!--</div>--> 
+                    <tbody>
+                        <tr> 
+                            <s:textfield label="Имя пользователя" key="userLogin"/>              
+                        </tr>
+                        <tr>
+                            <s:password label="Пароль" key="userPass"/>           
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Войти" name="OK" </input> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <s:property value="error"/>         
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </s:form> 
         </div>
+
     </body>
 </html>

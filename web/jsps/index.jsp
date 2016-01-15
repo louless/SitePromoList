@@ -12,77 +12,57 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
         <title>Welcome for you!</title>
     </head>
-    <body>
-        <div class="style-table-right">   
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                    <s:form name="testDataBase" action="/jsps/testDB.jsp"> 
-                         <s:submit value="тест соединения БД"/>
-                    </s:form>                        
-                    </td>                       
-                    <td>
-                    <s:form name="login" action="login"> 
-                       <s:submit value="Войти"/>
-                    </s:form>  
-                    </td>                    
-                </tr>
-            </tbody>
-        </table>           
-          <%--        ${pageContext.request.contextPath}/jsps/testDB.jsp--%> 
+    <body>        
+
+        <div class="mainframe">
+            <jsp:include page="/partjsp/topmenu.jsp" />
+
+            <div class="text-right">
+                <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a>    
+                <a href="${pageContext.request.contextPath}/jsps/login.jsp" >Войти</a> 
+            </div>  
+
+            <p>  <jsp:text> На этом ресурсе можно узнать самые популярные 
+                    сайты в интернете, разбитые по категориям для удобства
+                </jsp:text>
+            </p>    
+
+            <div class="style-table">                        
+                <table>
+                    <thead>
+                        <tr>
+                            <td>  <h1>Главное меню</h1>  </td>
+                            <td>   <h1>тут будет  Содержание</h1>  </td>
+                            <td>  <h1>тут будет  Реклама</h1>  </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 
+                                <ul id="mainmenu"> 
+                                    <li> <a href="#"> Спорт     </a></li>
+                                    <li> <a href="#"> Магазины  </a></li>
+                                    <li> <a href="#"> Кино      </a></li>
+                                </ul> 
+                            </td>
+                            <td> </td>
+                            <td>
+                            </td>
+                        </tr>              
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="style-text-center">         
+                <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
+                <p/> <br> 2016
+
+            </div>     
         </div>
-        <div class="style-table">
-        <table>
-            <thead>
-                <tr>
-                    <jsp:text> На этом ресурсе можно узнать самые популярные 
-                        сайты в интернете, разбитые по категориям для удобства
-                    </jsp:text>
-                </tr>
-                <tr>
-                    <td>
-                        <h1>МЕНЮ</h1>   
-                    </td>
-                    <td> 
-                        <h1>Содержание</h1>                   
-                    </td>
-                    <td> 
-                        
-                        <h1>Реклама</h1>                   
-                    </td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>       </td>
-                    <td> </td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td> </td>
-                    <td></td>
-                    <td>
-
-                    </td>
-                </tr>                
-   
-            </tbody>
-
-        </table>
-        </div>
-    <td>
-        <div class="style-text-center">         
-            <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
-            <p/> <br> 2016
-
-        </div>     
-    </td>
 
 
 
 
 
-</body>
+    </body>
 </html>

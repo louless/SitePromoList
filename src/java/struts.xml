@@ -12,9 +12,9 @@
             <result name="login">/jsps/login.jsp</result>      
         </action>
         
-        <action name="login">
+<!--        <action name="login">
             <result>/jsps/login.jsp</result>
-        </action>
+        </action>-->
             
     </package>
     

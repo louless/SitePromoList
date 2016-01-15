@@ -10,8 +10,10 @@ and open the template in the editor.
 
 body {
     font-family: Verdana, Arial, sans-serif;
-    font-size: smaller;
-    padding: 50px;
+    font-size: medium;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: #555;
     margin: auto;
     background-color: #c5e7e0;
@@ -38,7 +40,9 @@ table {
     width: 400px;
     padding: 10px;
     background-color: #ace5ee;
+    
     margin: auto;
+    margin-top: 50px;
 }
 
 th {
@@ -63,23 +67,102 @@ a:link:hover {
 }
 .style-text-center{   
     padding: 10px;
-    background-color: #ace5ee;
+  /*  background-color: #ace5ee;*/
     text-align: center;
 }
 
-.style-table-right
-table{ 
-    width: 33%;
-    padding: 10px;
+.text-right{
     text-align: right;
-    margin-left: auto;    
+   /* margin-left: auto;  */
+    float: right;
 }
+
 .style-table{        
-        padding: 10px;
-        background-color: #ace5ee;       
-        margin: auto;  
-        
+    padding: 10px;
+   /* background-color: #ace5ee; */      
+    margin: auto;  
+
 }
+
+/* ///////////////////////////////////////////////////////
+   основное меню */
+#mainmenu{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 200px;
+}
+
+#mainmenu a {
+  background-color: #949494;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border-left: 5px solid #33ADFF;
+  display: block;
+}
+#mainmenu li {
+  border-left: 10px solid #6c6874;
+  border-bottom: 1px solid #6c6874;
+}
+
+#mainmenu a:hover {
+  background-color: #666;
+  border-left: 5px solid #3333FF;
+}
+
+
+/* ///////////////////////////////////////////////////////
+  настройки верхнего горизонтального меню*/
+#topmenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #33ADFF;
+  border: 2px solid #0066FF;
+ /* width: 550px;*/
+ /* border-radius: 20px 5px; скругленные концы */
+}
+#topmenu li { 
+    display: inline; 
+}
+#topmenu a {
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+#topmenu a:hover {
+  border-radius: 20px 5px;
+  background-color: #0066FF;
+}
+/*
+#navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 2px solid #0066FF;
+  border-radius: 20px 5px;
+  width: 550px;
+  text-align: center;
+  background-color: #33ADFF;
+}
+
+#navbar a:hover {
+  border-radius: 20px 5px;
+  background-color: #0066FF;
+}*/
+
+/* ////////////////////////////////////////////////////////
+  фон рамки */
+.mainframe{
+    background-color: #ace5ee;  
+}
+
 
 
 
