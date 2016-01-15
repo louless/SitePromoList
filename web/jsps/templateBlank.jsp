@@ -13,10 +13,27 @@
         <title>Welcome for you!</title>
     </head>
     <body>
-        <div class="style-text-center">         
-            <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
-            <p/> <br> 2016
+        <div class="mainframe">
+            <jsp:include page="../partjsp/topmenu.jsp" />        
 
-        </div>     
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="style-text-center">         
+                <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
+                <p/> <br> 2016
+
+            </div>  
+        </div>
     </body>
 </html>

@@ -20,35 +20,37 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-    <s:submit/>
+        <div class="mainframe">
+            <h1>Hello World!</h1>
+            <s:submit/>
 
-    <select name="FromCityID" key="FromCityID">
-        <c:forEach var="row" items="${users.rows}">
-            <option value="${row.iduser}">${row.username}</option>
-        </c:forEach>
-    </select>
-        
+            <select name="FromCityID" key="FromCityID">
+                <c:forEach var="row" items="${users.rows}">
+                    <option value="${row.iduser}">${row.username}</option>
+                </c:forEach>
+            </select>
+
             <sql:query var="result" dataSource="jdbc/userdb">
                 SELECT iduser, username FROM userlist
             </sql:query>
-    
+
             <table border="1">
                 <!-- column headers -->
                 <tr>
-                <c:forEach var="columnName" items="${result.columnNames}">
-                    <th><c:out value="${columnName}"/></th>
-                </c:forEach>
-            </tr>
-            <!-- column data -->
-            <c:forEach var="row" items="${result.rowsByIndex}">
-                <tr>
-                <c:forEach var="column" items="${row}">
-                    <td><c:out value="${column}"/></td>
-                </c:forEach>
+                    <c:forEach var="columnName" items="${result.columnNames}">
+                        <th><c:out value="${columnName}"/></th>
+                        </c:forEach>
                 </tr>
-            </c:forEach>
-    </table>
+                <!-- column data -->
+                <c:forEach var="row" items="${result.rowsByIndex}">
+                    <tr>
+                        <c:forEach var="column" items="${row}">
+                            <td><c:out value="${column}"/></td>
+                        </c:forEach>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
 
-</body>
+    </body>
 </html>

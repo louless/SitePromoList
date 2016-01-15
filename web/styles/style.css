@@ -39,8 +39,7 @@ table {
 .style-table-login {
     width: 400px;
     padding: 10px;
-    background-color: #ace5ee;
-    
+    background-color: #ace5ee;   
     margin: auto;
     margin-top: 50px;
 }
@@ -85,12 +84,14 @@ a:link:hover {
 }
 
 /* ///////////////////////////////////////////////////////
-   основное меню */
+   левое (основное) меню */
 #mainmenu{
     margin: 0;
     padding: 0;
     list-style-type: none;
-    width: 200px;
+    width: 20%;
+    margin-left: 10px;
+    margin-right: auto;
 }
 
 #mainmenu a {
@@ -140,7 +141,7 @@ a:link:hover {
   border-radius: 20px 5px;
   background-color: #0066FF;
 }
-/*
+/*  элементы верхнего меню - черновик'
 #navbar {
   margin: 0;
   padding: 0;
@@ -158,10 +159,24 @@ a:link:hover {
 }*/
 
 /* ////////////////////////////////////////////////////////
-  фон рамки */
-.mainframe{
+  фон основной рамки */
+.mainframe{    
     background-color: #ace5ee;  
+    
 }
+
+
+/* ////////////////////////////////////////////////////////
+  панель рекламы */
+.promo-panel{
+    width: 30%;
+    margin-right: 5px;
+    margin-left: auto;
+/*    margin: auto;*/
+
+}
+
+
 
 
 

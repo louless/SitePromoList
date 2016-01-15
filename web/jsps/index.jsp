@@ -13,9 +13,8 @@
         <title>Welcome for you!</title>
     </head>
     <body>        
-
         <div class="mainframe">
-            <jsp:include page="/partjsp/topmenu.jsp" />
+            <jsp:include page="../partjsp/topmenu.jsp" />
 
             <div class="text-right">
                 <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a>    
@@ -37,26 +36,34 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+<!--                        <tr>
                             <td> 
-                                <ul id="mainmenu"> 
-                                    <li> <a href="#"> Спорт     </a></li>
-                                    <li> <a href="#"> Магазины  </a></li>
-                                    <li> <a href="#"> Кино      </a></li>
-                                </ul> 
+
                             </td>
                             <td> </td>
                             <td>
                             </td>
-                        </tr>              
-                    </tbody>
+                        </tr>              -->
+                    </tbody>                    
                 </table>
+
             </div>
+            
+            <ul id="mainmenu"> 
+                <li> <a href="#"> Спорт     </a></li>
+                <li> <a href="#"> Магазины  </a></li>
+                <li> <a href="#"> Кино      </a></li>
+            </ul> 
+
+            <div class="promo-panel">
+                <img src="../images/promo1.bmp" width="300" height="250"/>
+                <img src="../images/promo1.bmp" width="300" height="250"/>
+                <img src="../images/promo1.bmp" width="300" height="250"/>
+            </div>
+
+
+            <jsp:include page="../partjsp/bottom.jsp"/>    
         </div>
-        <jsp:include page="partjsp/bottom.jsp"/>
-
-
-
 
     </body>
 </html>
