@@ -28,42 +28,50 @@
 
             <div class="style-table">                        
                 <table>
-                    <thead>
+                    <!--                    <thead>
+                    
+                                        </thead>-->
+                    <tbody>
+                        <!--                        <tr>
+                                                    <td> 
+                        
+                                                        <img src="${pageContext.request.contextPath}/images/promo1.bmp" width="350" height="200"/> 
+                                                    </td>
+                                                    <td> 
+                                                        <img src="${pageContext.request.contextPath}/images/promo1.bmp" width="350" height="200"/>        
+                                                    </td>
+                                                    <td>
+                                                        <img src="${pageContext.request.contextPath}/images/promo1.bmp" width="350" height="200"/>        
+                                                    </td>
+                                                </tr> -->
                         <tr>
                             <td>  <h1>Главное меню</h1>  </td>
-                            <td>   <h1>тут будет  Содержание</h1>  </td>
-                            <td>  <h1>тут будет  Реклама</h1>  </td>
+                            <td>   <h1>Содержание</h1>  </td>
+                            <td>  <h1>Реклама</h1>  </td>
                         </tr>
-                    </thead>
-                    <tbody>
-<!--                        <tr>
-                            <td> 
-
-                            </td>
-                            <td> </td>
-                            <td>
-                            </td>
-                        </tr>              -->
                     </tbody>                    
                 </table>
 
             </div>
-            
+
+            <div class="promo-box-left">
+                <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
+            </div>
+
             <ul id="mainmenu"> 
                 <li> <a href="#"> Спорт     </a></li>
                 <li> <a href="#"> Магазины  </a></li>
                 <li> <a href="#"> Кино      </a></li>
             </ul> 
 
-            <div class="promo-panel">
-                <img src="../images/promo1.bmp" width="300" height="250"/>
-                <img src="../images/promo1.bmp" width="300" height="250"/>
-                <img src="../images/promo1.bmp" width="300" height="250"/>
-            </div>
 
+            <div class="promo-box-right">
+                <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
+                <br/>
+                <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
+            </div>
 
             <jsp:include page="../partjsp/bottom.jsp"/>    
         </div>
-
     </body>
 </html>

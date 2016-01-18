@@ -66,19 +66,19 @@ a:link:hover {
 }
 .style-text-center{   
     padding: 10px;
-  /*  background-color: #ace5ee;*/
+    /*  background-color: #ace5ee;*/
     text-align: center;
 }
 
 .text-right{
     text-align: right;
-   /* margin-left: auto;  */
+    /* margin-left: auto;  */
     float: right;
 }
 
 .style-table{        
     padding: 10px;
-   /* background-color: #ace5ee; */      
+    /* background-color: #ace5ee; */      
     margin: auto;  
 
 }
@@ -95,51 +95,51 @@ a:link:hover {
 }
 
 #mainmenu a {
-  background-color: #949494;
-  color: #fff;
-  padding: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  border-left: 5px solid #33ADFF;
-  display: block;
+    background-color: #949494;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 5px solid #33ADFF;
+    display: block;
 }
 #mainmenu li {
-  border-left: 10px solid #6c6874;
-  border-bottom: 1px solid #6c6874;
+    border-left: 10px solid #6c6874;
+    border-bottom: 1px solid #6c6874;
 }
 
 #mainmenu a:hover {
-  background-color: #666;
-  border-left: 5px solid #3333FF;
+    background-color: #666;
+    border-left: 5px solid #3333FF;
 }
 
 
 /* ///////////////////////////////////////////////////////
   настройки верхнего горизонтального меню*/
 #topmenu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  background-color: #33ADFF;
-  border: 2px solid #0066FF;
- /* width: 550px;*/
- /* border-radius: 20px 5px; скругленные концы */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #33ADFF;
+    border: 2px solid #0066FF;
+    /* width: 550px;*/
+    /* border-radius: 20px 5px; скругленные концы */
 }
 #topmenu li { 
     display: inline; 
 }
 #topmenu a {
-  color: #fff;
-  padding: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  width: 100px;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
 }
 
 #topmenu a:hover {
-  border-radius: 20px 5px;
-  background-color: #0066FF;
+    border-radius: 20px 5px;
+    background-color: #0066FF;
 }
 /*  элементы верхнего меню - черновик'
 #navbar {
@@ -162,18 +162,30 @@ a:link:hover {
   фон основной рамки */
 .mainframe{    
     background-color: #ace5ee;  
-    
+
 }
 
 
 /* ////////////////////////////////////////////////////////
-  панель рекламы */
-.promo-panel{
-    width: 30%;
-    margin-right: 5px;
+  правый блок рекламы  */
+.promo-box-right{   
+    width: 20%;
+    margin-right: 10px;
     margin-left: auto;
-/*    margin: auto;*/
+}
 
+.promo-box-right img{
+    width: 100%;
+}
+
+/* ////////////////////////////////////////////////////////
+  левый блок рекламы  */
+.promo-box-left img{
+    width: 20%;
+    /*height: 10%;*/
+    margin-left: 5px;
+    margin-right: auto;
+    padding: 5px;
 }
 
 
