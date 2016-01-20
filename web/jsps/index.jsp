@@ -32,11 +32,7 @@
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
         </div>
 
-        <ul id="mainmenu"> 
-            <li> <a href="#"> Спорт     </a></li>
-            <li> <a href="#"> Магазины  </a></li>
-            <li> <a href="#"> Кино      </a></li>
-        </ul> 
+        <jsp:include page="../partjsp/mainMenu.jsp"/>    
 
         <div class="promo-box-right">
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
