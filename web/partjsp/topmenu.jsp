@@ -16,8 +16,8 @@
         <div class="mainframe">
         <ul id="topmenu">
                 <li> <a href="${pageContext.request.contextPath}/jsps/index.jsp">Главная</a> </li>
-                <li> <a href="#">Новости</a> </li>
-                <li> <a href="#">О нас</a> </li>
+                <li> <a href="${pageContext.request.contextPath}/jsps/news.jsp">Новости</a> </li>
+                <li> <a href="${pageContext.request.contextPath}/jsps/aboutUs.jsp">О нас</a> </li>
         </ul>
         </div>        
     </body>

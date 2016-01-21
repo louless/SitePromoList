@@ -32,12 +32,16 @@
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
         </div>
 
-        <jsp:include page="../partjsp/mainMenu.jsp"/>    
+        <jsp:include page="../partjsp/mainMenu.jsp"/>  
+        </br>
+        </br>
+        <div class="promo-box-left">
+            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
+        </div>        
 
         <div class="promo-box-right">
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
-            <br/>
-            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
+
         </div>
 
         <jsp:include page="../partjsp/bottom.jsp"/>    
