@@ -26,23 +26,31 @@
                 </jsp:text>
             </p>    
 
-        </div>
 
         <div class="promo-box-left">
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
         </div>
 
         <jsp:include page="../partjsp/mainMenu.jsp"/>  
+        
+        <div class="style-text-center"> 
+        <p>  Список сайтов на определенную тему</p>
+        </div>
+        
         </br>
-        </br>
+        
+        <div class="promo-box-right">
+            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
+        </div>
+        
+        <div class="clear-float"></div>
+        
+        
         <div class="promo-box-left">
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
         </div>        
 
-        <div class="promo-box-right">
-            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
 
-        </div>
 
         <jsp:include page="../partjsp/bottom.jsp"/>    
     </div>

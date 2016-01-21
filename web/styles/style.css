@@ -87,12 +87,12 @@ a:link:hover {
 /* ///////////////////////////////////////////////////////
    левое (основное) меню */
 #mainmenu{
-    margin: 0;
     padding: 0;
     list-style-type: none;
     width: 15%;
     margin-left: 10px;
     margin-right: auto;
+    float: left;
 }
 
 #mainmenu a {
@@ -112,6 +112,10 @@ a:link:hover {
 #mainmenu a:hover {
     background-color: #666;
     border-left: 5px solid #3333FF;
+}
+
+.clear-float{
+    clear: left;
 }
 
 
