@@ -12,10 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1> ${paramValues.title}  </h1>
+<!--        <h1> ${paramValues.title}  </h1>
         <% request.getParameter("title");%>
         <% String login = (String)request.getAttribute("title"); %>
         <% System.out.println("login1");%>
-        <%System.out.println(login);%>
+        <%System.out.println(login);%>-->
+        
+        <h1>Hello JQuery!</h1> 
     </body>
 </html>
