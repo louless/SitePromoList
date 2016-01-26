@@ -28,7 +28,7 @@
                         $(this).addClass("blue").fadeOut("slow");
                     });
 //                    обработка при нажатии на кнопку button1
-                            $('#button1').click(function () {
+                    $('#button1').click(function () {
                         $.ajax({
                             url: "../partjsp/center.jsp",
                             cache: false,
@@ -37,6 +37,19 @@
                             }
                         });
                     });
+
+                    $('#formPostName').submit(function () {
+                        $.ajax({
+                            type: 'POST',
+                            url: "../partjsp/center.jsp",
+                            data: "idname="+$("#namePost").val(),  
+                            success: function (html) {
+                                $("#MyContent").html(html);
+                            }
+                        });
+                        return false;
+                    });
+
                 });
             </script>
 
@@ -45,18 +58,22 @@
                 h1 { cursor: pointer; }
             </style>
 
-            <h1>Проверка.</h1>
-            <h2>Проверка. 2</h2>
+            <h1>Синеющая проверка</h1>
+            <h2>Исчезающая проверка</h2>
 
             <p>проверка на добавление данных с другой страницы</p>  
             <form>  
                 <input id="button1" type="button" value="Страница в центр">   
-                <!--<input id="btn2" type="button" value="Страница 2">-->  
+                <!--<input id="button2" type="button" value="Страница в центр с динам. данными">-->  
             </form>  
 
             <div id="MyContent"></div>  
 
-
+            <form id="formPostName" >
+                <p>Введите имя</p>
+                <input type="text" id="namePost" >
+                <input type="submit" value="Попробовать">            
+            </form>
 
 
 
