@@ -14,6 +14,8 @@
     <body>
         
         <h1>Hello JQuery!</h1> 
-        <h2>You are welcome, ${param.idname}</h2>
+        ${param.idname}
+        ${param.titleContent}
+        <!--${param.testinput}-->
     </body>
 </html>

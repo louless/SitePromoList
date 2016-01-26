@@ -18,7 +18,6 @@
             <%@include file="../partjsp/topmenu.jsp" %>        
             <script type="text/javascript">
                 $(document).ready(function () {
-
 //                    обработка при нажатии на текст в <h1>
                     $("h1").click(function () {
                         $(this).addClass("blue");
@@ -42,14 +41,13 @@
                         $.ajax({
                             type: 'POST',
                             url: "../partjsp/center.jsp",
-                            data: "idname="+$("#namePost").val(),  
+                            data: "idname=" + $("#namePost").val(),
                             success: function (html) {
                                 $("#MyContent").html(html);
                             }
                         });
                         return false;
                     });
-
                 });
             </script>
 
@@ -75,7 +73,12 @@
                 <input type="submit" value="Попробовать">            
             </form>
 
-
+<!--            <ul id="mainmenu"> 
+                <li> <a href="#" id="sport"> Спорт         </a></li>
+                <li> <a href="#"> Магазины      </a></li>
+                <li> <a href="#"> Кино          </a></li>
+                <li> <a href="#"> Искусство     </a></li>
+            </ul> -->
 
 
 

@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
+        <script type="text/javascript" src="../lib/jquery.js"></script>
         <title>Welcome for you!</title>
     </head>
     <body>        
@@ -20,7 +21,7 @@
                 <a href="${pageContext.request.contextPath}/jsps/testJQuery.jsp" >Тест JQuery</a> 
                 <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a>    
                 <a href="${pageContext.request.contextPath}/jsps/login.jsp" >Войти</a> 
-                
+
             </div>  
 
             <p>  <jsp:text> На этом ресурсе можно узнать самые популярные 
@@ -29,37 +30,37 @@
             </p>    
 
 
-        <div class="promo-box-left">
-            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
+            <div class="promo-box-left">
+                <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
+            </div>
+
+            <%@include file="../partjsp/mainMenu.jsp"%>  
+
+            <div class="style-text-center"> 
+                <p>  Список сайтов на определенную тему</p>
+            </div>
+
+
+            <!--тут добавить динамичекое изменение содержимого, попробую с помощью ajax-->
+            <div id="content_center"> </div>
+
+            </br>
+
+            <div class="promo-box-right">
+                <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
+            </div>
+
+            <div class="clear-float"></div>
+
+
+            <div class="promo-box-left">
+                <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
+            </div>        
+
+
+
+            <%@include file="../partjsp/bottom.jsp"%>           
         </div>
 
-        <%@include file="../partjsp/mainMenu.jsp"%>  
-        
-        <div class="style-text-center"> 
-        <p>  Список сайтов на определенную тему</p>
-        </div>
-        
-        <!--тут добавить динамичекое изменение содержимого, попробую с помощью ajax-->
-        <jsp:include page="../partjsp/center.jsp">
-            <jsp:param name="title" value="sport" />
-        </jsp:include>
-        
-        </br>
-        
-        <div class="promo-box-right">
-            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
-        </div>
-        
-        <div class="clear-float"></div>
-        
-        
-        <div class="promo-box-left">
-            <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
-        </div>        
-
-
-
-        <%@include file="../partjsp/bottom.jsp"%>    
-    </div>
-</body>
+    </body>
 </html>
