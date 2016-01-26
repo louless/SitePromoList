@@ -14,7 +14,7 @@
     </head>
     <body>        
         <div class="mainframe">
-            <jsp:include page="../partjsp/topmenu.jsp" />
+            <%@include file="../partjsp/topmenu.jsp" %>
 
             <div class="text-right">
                 <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a>    
@@ -31,11 +31,16 @@
             <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
         </div>
 
-        <jsp:include page="../partjsp/mainMenu.jsp"/>  
+        <%@include file="../partjsp/mainMenu.jsp"%>  
         
         <div class="style-text-center"> 
         <p>  Список сайтов на определенную тему</p>
         </div>
+        
+        <!--тут добавить динамичекое изменение содержимого, попробую с помощью ajax-->
+        <jsp:include page="../partjsp/center.jsp">
+            <jsp:param name="title" value="sport" />
+        </jsp:include>
         
         </br>
         
@@ -52,7 +57,7 @@
 
 
 
-        <jsp:include page="../partjsp/bottom.jsp"/>    
+        <%@include file="../partjsp/bottom.jsp"%>    
     </div>
 </body>
 </html>

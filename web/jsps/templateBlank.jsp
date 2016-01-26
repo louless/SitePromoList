@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="mainframe">
-            <jsp:include page="../partjsp/topmenu.jsp" />        
+            <%@include file="../partjsp/topmenu.jsp" %>        
 
 
             

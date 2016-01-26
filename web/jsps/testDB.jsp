@@ -21,6 +21,7 @@
     </head>
     <body>
         <div class="mainframe">
+            <%@include file="../partjsp/topmenu.jsp" %>  
             <h1>Hello World!</h1>
             <s:submit/>
 
