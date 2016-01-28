@@ -5,6 +5,11 @@
 --%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%--<%@taglib prefix="s" uri="/struts-tags" %>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,7 +46,7 @@
                         $.ajax({
                             type: 'POST',
                             url: "../partjsp/center.jsp",
-                            data: "idname=" + $("#namePost").val(),
+                            data: "idname=" + $("#namePost").val() + "&idrubric=2",                           
                             success: function (html) {
                                 $("#MyContent").html(html);
                             }
@@ -72,13 +77,6 @@
                 <input type="text" id="namePost" >
                 <input type="submit" value="Попробовать">            
             </form>
-
-<!--            <ul id="mainmenu"> 
-                <li> <a href="#" id="sport"> Спорт         </a></li>
-                <li> <a href="#"> Магазины      </a></li>
-                <li> <a href="#"> Кино          </a></li>
-                <li> <a href="#"> Искусство     </a></li>
-            </ul> -->
 
 
 
