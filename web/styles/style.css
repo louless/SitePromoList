@@ -57,6 +57,7 @@ a:link:hover {
     text-decoration: underline;
 }
 .center{   
+    margin: 100%;
     padding: 10px;
     margin: auto;
     font-size: 14px;

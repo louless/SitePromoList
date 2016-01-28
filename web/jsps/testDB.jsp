@@ -1,9 +1,10 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%-- 
     Document   : testDB
     Created on : 06.01.2016, 11:56:34
     Author     : VGLukin
 --%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
@@ -23,7 +24,6 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>  
             <h1>Hello World!</h1>
-            <s:submit/>
 
             <select name="FromCityID" key="FromCityID">
                 <c:forEach var="row" items="${users.rows}">
