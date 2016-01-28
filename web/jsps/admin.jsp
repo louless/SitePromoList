@@ -23,7 +23,7 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>        
 
-            <form name="insertNew" action="InsertNew" method="InsertNewSite">
+            <s:form name="insertNew" action="insertNewForm" method="InsertNewSite">
                 <table >
                     <tbody>
                         <tr>
@@ -45,12 +45,13 @@
                             </td>
                         </tr>  
                         <tr>
-                            <td><s:submit value="Записать"></s:submit> </td> 
+                            <td><s:submit value="Записать"/> </td> 
                         </tr>
                     </tbody>                
                 </table>  
 
-            </form>
+            </s:form> 
+                                          
 
             <%@include file="../partjsp/bottom.jsp"%> 
         </div>

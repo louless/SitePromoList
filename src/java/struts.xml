@@ -15,6 +15,10 @@
 <!--        <action name="login">
             <result>/jsps/login.jsp</result>
         </action>-->
+        
+        <action name="insertNewForm" class="Actions.InsertNewAction" method="InsertNewSite">
+            <result name="admin">/jsps/admin.jsp</result>     
+        </action>
             
     </package>
     
