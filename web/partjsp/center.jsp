@@ -39,7 +39,7 @@
             <!--column data--> 
             <c:forEach var="row" items="${result.rows}">
                 <tr>         
-                    <td> <a href="http://<c:out value="${row.url}" default="#"/>" > <c:out value="${row.namesite}" /> </a> </td>
+                    <td> <a href="http://<c:out value="${row.url}" default="#"/>" > <c:out value="${row.namesite}"/> </a> </td>
                 </tr>
             </c:forEach>
         </table>
