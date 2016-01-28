@@ -9,7 +9,7 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 <sql:query var="rubrics" dataSource="jdbc/userdb" >
-    SELECT idRubric, rubricName FROM RubricRef
+    SELECT idRubric, rubricName FROM rubricref
 </sql:query> 
 
 <!DOCTYPE html>

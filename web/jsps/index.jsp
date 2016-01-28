@@ -18,6 +18,7 @@
             <%@include file="../partjsp/topmenu.jsp" %>
 
             <div class="text-right">
+                <a href="${pageContext.request.contextPath}/jsps/admin.jsp">Администратор</a>
                 <a href="${pageContext.request.contextPath}/jsps/testJQuery.jsp" >Тест JQuery</a> 
                 <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a>    
                 <a href="${pageContext.request.contextPath}/jsps/login.jsp" >Войти</a> 
