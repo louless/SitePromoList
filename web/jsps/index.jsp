@@ -21,11 +21,10 @@
                 <a href="${pageContext.request.contextPath}/jsps/testJQuery.jsp" >Тест JQuery</a> 
                 <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a>    
                 <a href="${pageContext.request.contextPath}/jsps/login.jsp" >Войти</a> 
-
             </div>  
 
-            <p>  <jsp:text> На этом ресурсе можно узнать самые популярные 
-                    сайты в интернете, разбитые по категориям для удобства
+            <p>  <jsp:text> У нас самые популярные 
+                    сайты в интернете, разбитые по категориям для удобства на любой вкус!
                 </jsp:text>
             </p>    
 
@@ -34,24 +33,22 @@
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
             </div>
 
-            <%@include file="../partjsp/mainMenu.jsp"%>  
-
-            <div class="style-text-center"> 
+            <%@include file="../partjsp/mainMenu.jsp"%>              
+           
+<!--            <div class="center"> 
                 <p>  Список сайтов на определенную тему</p>
-            </div>
-
-
-            <!--тут добавить динамичекое изменение содержимого, попробую с помощью ajax-->
-            <div id="content_center"> </div>
+            </div>            -->
 
             </br>
-
             <div class="promo-box-right">
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
-            </div>
+            </div>            
+
+            <!--ajax-->
+            
+            <div id="content_center"> </div>   
 
             <div class="clear-float"></div>
-
 
             <div class="promo-box-left">
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     

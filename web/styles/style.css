@@ -28,15 +28,6 @@ h1 {
     font-weight: normal;
     width: 100%;
 }
-/*
-table {
-    width: 580px;
-    padding: 10px;
-    background-color: #c5e7e0;
-    margin: auto;
-}
-*/
-
 .style-table-login {
     width: 400px;
     padding: 10px;
@@ -65,23 +56,25 @@ a:link:hover {
     font-weight: normal;
     text-decoration: underline;
 }
-.style-text-center{   
+.center{   
     padding: 10px;
-    /*  background-color: #ace5ee;*/
+    margin: auto;
+    font-size: 14px;
     text-align: center;
+}
+
+.center table {
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: auto;
+    text-align: left; 
+    font-size: 16px;
 }
 
 .text-right{
     text-align: right;
     /* margin-left: auto;  */
     float: right;
-}
-
-.style-table{        
-    padding: 10px;
-    /* background-color: #ace5ee; */      
-    margin: auto;  
-
 }
 
 /* ///////////////////////////////////////////////////////
@@ -167,7 +160,6 @@ a:link:hover {
   фон основной рамки */
 .mainframe{    
     background-color: #ace5ee;  
-
 }
 
 /* ////////////////////////////////////////////////////////
@@ -176,10 +168,12 @@ a:link:hover {
     width: 15%;
     margin-right: 10px;
     margin-left: auto;
+    float: right;
 }
 
 .promo-box-right img{
     width: 100%;
+    float: right;
 }
 
 /* ////////////////////////////////////////////////////////

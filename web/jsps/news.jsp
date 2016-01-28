@@ -3,7 +3,6 @@
     Created on : 14.01.2016, 9:00:06
     Author     : VGLukin
 --%>
-<%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,19 +16,15 @@
             <jsp:include page="../partjsp/topmenu.jsp" />        
 
 
-        <h1>
-            <p> Сайт создан в январе 2016 года и продолжает обновляться по настоящее время </br>
-            <p> По всем вопросам обращаться lvg135@yandex.ru
-        </h1>
+
+            <p> Сайт создан в январе 2016 года и продолжает обновляться по настоящее время.</br>
+            <p> По всем вопросам обращаться lvg135@yandex.ru.
 
 
 
 
-            <div class="style-text-center">         
-                <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
-                <p/> <br> 2016
 
-            </div>  
+            <%@include file="../partjsp/bottom.jsp"%>  
         </div>
     </body>
 </html>

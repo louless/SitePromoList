@@ -4,6 +4,8 @@
     Author     : VGLukin
 --%>
 
+<!--нижняя часть каждой страницы-->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,7 +14,7 @@
      
     </head>
     <body>
-        <div class="style-text-center">         
+        <div class="center">         
             <p>Контакты:<br><a href="mailto:lvg135@yandex.ru">lvg135@yandex.ru</a>
             <p/> <br> 2016
 

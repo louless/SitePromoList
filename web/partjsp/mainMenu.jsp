@@ -4,6 +4,8 @@
     Author     : VGLukin
 --%>
 
+<!--основное (левое) меню-->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,16 +36,18 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $('li').click(function () {
-                    $.ajax({
-                        type: 'POST',
-                        url: "../partjsp/center.jsp",
-                        data: "idrubric=" +$(this).val(),
-                        success: function (html) {
-                            $("#content_center").html(html);
-                        }
-                    });
-                    return false;
+                $('#mainmenu li').click(function () {
+//                    $('li').click(function () {
+                        $.ajax({
+                            type: 'POST',
+                            url: "../partjsp/center.jsp",
+                            data: "idrubric=" + $(this).val(),
+                            success: function (html) {
+                                $("#content_center").html(html);
+                            }
+                        });
+                        return false;
+//                    });
                 });
             });
         </script>

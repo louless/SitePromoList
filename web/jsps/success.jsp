@@ -13,5 +13,8 @@
     </head>
     <body>
         <h1><strong > Welcome! </strong></h1>
+        
+        
+        <%@include file="../partjsp/bottom.jsp"%> 
     </body>
 </html>

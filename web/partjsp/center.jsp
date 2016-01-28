@@ -5,6 +5,8 @@
     Author     : VGLukin
 --%>
 
+<!--центральная часть страницы для index.jsp - тут определяется список сайтов на выбранный пункт левого меню-->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
@@ -18,31 +20,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link href="${pageContext.request.contextPath}/styles/style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-
-        <h1>Список сайтов</h1> 
-
-
         <sql:query var="result" scope="session" dataSource="jdbc/userdb">
             SELECT idsite, url, namesite FROM sitelist where idrubric = ${param.idrubric}
         </sql:query>
 
-        <table>
-            <!--column headers--> 
-            <!--            <tr>
-            <c:forEach var="columnName" items="${result.columnNames}">
-                <th><c:out value="${columnName}"/></th>
-            </c:forEach>
-            </tr>-->
-            <!--column data--> 
-            <c:forEach var="row" items="${result.rows}">
-                <tr>         
-                    <td> <a href="http://<c:out value="${row.url}" default="#"/>" > <c:out value="${row.namesite}"/> </a> </td>
-                </tr>
-            </c:forEach>
-        </table>
+        <!--<p>Check</p>-->
+        <div class="center">
+            <table>
+                <c:forEach var="row" items="${result.rows}">
+                    <tr>         
+                        <td> <a href="http://<c:out value="${row.url}" default="#"/>" > <c:out value="${row.namesite}"/> </a> </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
 
 
     </body>

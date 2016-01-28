@@ -9,16 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="${pageContext.request.contextPath}/styles/style.css" type="text/css" rel="stylesheet">
-        
+        <link href="${pageContext.request.contextPath}/styles/style.css" type="text/css" rel="stylesheet">       
     </head>
     <body> 
         <div class="mainframe">
-        <ul id="topmenu">
+            <ul id="topmenu">
                 <li> <a href="${pageContext.request.contextPath}/jsps/index.jsp">Главная</a> </li>
                 <li> <a href="${pageContext.request.contextPath}/jsps/news.jsp">Новости</a> </li>
                 <li> <a href="${pageContext.request.contextPath}/jsps/aboutUs.jsp">О нас</a> </li>
-        </ul>
+            </ul>
         </div>        
     </body>
 </html>
