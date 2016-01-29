@@ -23,7 +23,7 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>        
 
-            <s:form name="insertNew" action="insertNewForm" method="InsertNewSite" >
+            <s:form name="insertNew" action="insertNewForm" method="InsertNewSite" enctype="multipart/form-data">
                 <table >
                     <tbody>
                         <tr>
