@@ -37,7 +37,7 @@ public class WorkDB {
     private WorkDB() {
         String dbName = "jdbc:mysql://localhost:3306/userdb?zeroDateTimeBehavior=convertToNull";
         String username = "root";
-        String password = "13pass";
+        String password = "3difficul1";
         con = null;
         try {
             con = DriverManager.getConnection(dbName, username, password);
