@@ -23,15 +23,18 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>        
 
-            <s:form name="insertNew" action="insertNewForm" method="InsertNewSite">
+            <s:form name="insertNew" action="insertNewForm" method="InsertNewSite" >
                 <table >
                     <tbody>
                         <tr>
                             <td>
                                 <strong>Рубрика:</strong>
-                                <select key="idRubric" name="idRubric">
+                                <select key="idRubric" name="idRubric" >
                                     <c:forEach var="row" items="${rubrics.rows}" >
-                                        <option value="${row.idRubric}">${row.rubricName}</option>
+                                        <option <c:if test="${param.idRubric == row.idRubric}" > 
+                                                selected
+                                                </c:if>
+                                            value="${row.idRubric}">${row.rubricName}</option>
                                     </c:forEach>
                                 </select>  
                             </td>                        
@@ -43,10 +46,18 @@
                         <tr>
                             <td><s:textfield label="Имя сайта" key="siteName"/> 
                             </td>
-                        </tr>  
+                        </tr> 
+                        <tr>
+                            <td>
+                                Картинка:
+                            </td>
+                            <td>
+                                <input type="file" name="imageInput" value="" width="50" />
+                            </td>
+                        </tr>
                         <tr>
                             <td><s:submit value="Записать"/> </td> 
-                        </tr>
+                        </tr>               
                     </tbody>                
                 </table>  
 
