@@ -8,6 +8,7 @@ package Actions;
 import Model.InsertNew;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -18,9 +19,9 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
     private InsertNew insertNew = new InsertNew();
     public static final String ADMIN = "admin";
 
-    public String InsertNewSite() throws Exception{
+    public String InsertNewSite(HttpServletRequest request) throws Exception{
         boolean resultInsert = false;
-        resultInsert = insertNew.insertSite();
+        resultInsert = insertNew.insertSite(request);
         
         return ADMIN;
     }

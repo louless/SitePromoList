@@ -25,14 +25,15 @@ public class InsertNew {
     /**
      * вставка нового сайта
      *
+     * @param request
      * @return inserting status
      * @throws java.sql.SQLException
      */
-    public boolean insertSite() throws SQLException {
+    public boolean insertSite(HttpServletRequest request) throws SQLException {
         boolean result, result1;
         boolean result2 = true;
         result1 = saveIntoDB();  
-       // result2 = saveIcon();
+        result2 = saveIcon(request);
         result = result1 && result2;
         return result;
     }       
