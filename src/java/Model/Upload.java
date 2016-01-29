@@ -28,12 +28,14 @@ public class Upload {
 
     private Random random = new Random();
 
-    public void load(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public boolean load(HttpServletRequest request) throws ServletException, IOException {
+        boolean success = false;
+        
         //проверяем является ли полученный запрос multipart/form-data
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (!isMultipart) {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST);
-            return;
+    //        response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            return success;
         }
 
         // Создаём класс фабрику 
@@ -52,7 +54,7 @@ public class Upload {
         ServletFileUpload upload = new ServletFileUpload(factory);
 
         //максимальный размер данных который разрешено загружать в байтах
-        //по умолчанию -1, без ограничений. Устанавливаем 10 мегабайт. 
+        //по умолчанию -1, без ограничений. Устанавливаем 5 мегабайт. 
         upload.setSizeMax(1024 * 1024 * 5);
 
         try {
@@ -71,10 +73,10 @@ public class Upload {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            return;
+        //    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            success = false;
         }
+        return success;
     }
 
     /**

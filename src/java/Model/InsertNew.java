@@ -6,7 +6,10 @@
 package Model;
 
 import dbPackage.WorkDB;
+import java.io.IOException;
 import java.sql.SQLException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * вставка нового элемента в базу
@@ -57,19 +60,20 @@ public class InsertNew {
      * сохранение иконки сайта в папку 
      * @return 
      */
-    private boolean saveIcon(){
+    private boolean saveIcon(HttpServletRequest request){
         boolean result;
         result = false;
- //       result = writeFile(String fileName, );
+        Upload upload = new Upload();   
+        try{
+        result = upload.load(request);
+        }catch(ServletException | IOException e){
+            return false;
+        }
         
         
         return result;        
     }
     
-    private boolean writeFile(String fileName, String text) {
-      return false;
-    
-}
 
     public int getIdRubric() {
         return idRubric;
