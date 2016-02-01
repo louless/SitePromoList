@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import static org.apache.struts2.ServletActionContext.getServletContext;
+
 
 /**
  *
@@ -28,13 +30,14 @@ public class Upload {
 
     private Random random = new Random();
 
-    public boolean load(HttpServletRequest request) throws ServletException, IOException {
-        boolean success = false;
+    public String load(HttpServletRequest request) throws ServletException, IOException {
+        String success = "";
         
         //проверяем является ли полученный запрос multipart/form-data
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (!isMultipart) {
-    //        response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+           // response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            success = "SC_BAD_REQUEST";
             return success;
         }
 
@@ -46,9 +49,9 @@ public class Upload {
         // устанавливаем один мегабайт
         factory.setSizeThreshold(1024 * 1024);
 
-        // устанавливаем временную директорию
-  //      File tempDir = (File) getServletContext().getAttribute("javax.servlet.context.tempdir");
-   //     factory.setRepository(tempDir);
+        // устанавливаем временную директорию 
+        File tempDir = (File) getServletContext().getAttribute("javax.servlet.context.tempdir");
+        factory.setRepository(tempDir);
 
         //Создаём сам загрузчик
         ServletFileUpload upload = new ServletFileUpload(factory);
@@ -73,8 +76,8 @@ public class Upload {
                 }
             }
         } catch (Exception e) {
-        //    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            success = false;
+        //    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);     
+            success = "SC_INTERNAL_SERVER_ERROR";
         }
         return success;
     }
@@ -90,8 +93,8 @@ public class Upload {
         File uploadetFile = null;
         //выбираем файлу имя пока не найдём свободное
         do {
-   //         String path = getServletContext().getRealPath("/icons/" + random.nextInt() + item.getName());
-    //        uploadetFile = new File(path);
+           String path = getServletContext().getRealPath("/icons/" + random.nextInt() + item.getName());
+           uploadetFile = new File(path);
         } while (uploadetFile.exists());
 
         //создаём файл

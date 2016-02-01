@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.Part;
 
 /**
  * вставка нового элемента в базу
@@ -29,52 +30,57 @@ public class InsertNew {
      * @return inserting status
      * @throws java.sql.SQLException
      */
-    public boolean insertSite(HttpServletRequest request) throws SQLException {
-        boolean result, result1;
-        boolean result2 = true;
-        result1 = saveIntoDB();  
+    public String insertSite(HttpServletRequest request) throws SQLException {
+        String result = "";
+        String result1 = "";
+        String result2 = "";
+        //     result1 = saveIntoDB();  
         result2 = saveIcon(request);
-        result = result1 && result2;
+        if ((result1.equals("")) && (result2.equals(""))) {
+            result = "";
+        }
         return result;
-    }       
-    
-    
+    }
+
     /**
      * сохранение сайта в базу
-     * @return 
+     *
+     * @return
      */
-    private boolean saveIntoDB(){
-        try{
+    private boolean saveIntoDB() {
+        try {
             WorkDB.getInstance().setQuery(
                     "insert into sitelist (idrubric, url, namesite) values (?, ?, ?)");
             WorkDB.getInstance().getPstmt().setInt(1, idRubric);
             WorkDB.getInstance().getPstmt().setString(2, url);
             WorkDB.getInstance().getPstmt().setString(3, siteName);
             WorkDB.getInstance().PrepareQueryExe();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             return false;
         }
         return true;
     }
-    
+
     /**
-     * сохранение иконки сайта в папку 
-     * @return 
+     * сохранение иконки сайта в папку
+     *
+     * @return
      */
-    private boolean saveIcon(HttpServletRequest request){
-        boolean result;
-        result = false;
-        Upload upload = new Upload();   
-        try{
-        result = upload.load(request);
-        }catch(ServletException | IOException e){
-            return false;
+    private String saveIcon(HttpServletRequest request) {
+        String result;
+        result = "bad";
+        UploadFile uploadFile = new UploadFile();
+        try {
+             result = uploadFile.load(request);
+
+        } catch (ServletException | IOException e) {
+            return result;
         }
-        
-        
-        return result;        
+
+        return result;
     }
-    
+
+
 
     public int getIdRubric() {
         return idRubric;

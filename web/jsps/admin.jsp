@@ -23,7 +23,7 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>        
 
-            <s:form name="insertNew" action="insertNewForm" method="InsertNewSite" enctype="multipart/form-data">
+            <s:form name="insertNew" action="insertNewForm" enctype="multipart/form-data" method="post">
                 <table >
                     <tbody>
                         <tr>
@@ -62,7 +62,7 @@
                 </table>  
 
             </s:form> 
-                                          
+            <s:property value="resultInsert" default="Результат:"/>                              
 
             <%@include file="../partjsp/bottom.jsp"%> 
         </div>
