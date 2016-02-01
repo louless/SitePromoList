@@ -49,10 +49,10 @@
                         </tr> 
                         <tr>
                             <td>
-                                Картинка:
+                                
                             </td>
                             <td>
-                                <input type="file" name="imageInput" value="" width="50" />
+                                <s:file label="Картинка" key="file" name="file" value="" width="50" />
                             </td>
                         </tr>
                         <tr>

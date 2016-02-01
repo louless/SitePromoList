@@ -6,6 +6,7 @@
 package Model;
 
 import dbPackage.WorkDB;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
@@ -22,6 +23,7 @@ public class InsertNew {
     private int idRubric;
     private String url;
     private String siteName;
+    private File file;
 
     /**
      * вставка нового сайта
@@ -35,7 +37,7 @@ public class InsertNew {
         String result1 = "";
         String result2 = "";
         //     result1 = saveIntoDB();  
-        result2 = saveIcon(request);
+        result2 = saveIcon(request, file, url);
         if ((result1.equals("")) && (result2.equals(""))) {
             result = "";
         }
@@ -66,14 +68,13 @@ public class InsertNew {
      *
      * @return
      */
-    private String saveIcon(HttpServletRequest request) {
+    private String saveIcon(HttpServletRequest request, File file, String fileName) {
         String result;
-        result = "bad";
-        UploadFile uploadFile = new UploadFile();
-        try {
-             result = uploadFile.load(request);
-
-        } catch (ServletException | IOException e) {
+        result = "";
+        UploadFileStruts uploadFile = new UploadFileStruts();
+        try { 
+             result = uploadFile.load(request, file, fileName);
+        } catch (IOException e) {
             return result;
         }
 
@@ -104,6 +105,14 @@ public class InsertNew {
 
     public void setSiteName(String siteName) {
         this.siteName = siteName;
+    }
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
     }
 
 }
