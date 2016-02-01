@@ -8,14 +8,21 @@ package Actions;
 import Model.InsertNew;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import javax.servlet.ServletContext;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.interceptor.ServletRequestAware;
-
 /**
  *
  * @author VGLukin
  */
+
+@WebServlet("/insertNewForm")
+@MultipartConfig(fileSizeThreshold=1024*1024*2, // 2MB
+                 maxFileSize=1024*1024*10,      // 10MB
+                 maxRequestSize=1024*1024*50)   // 50MB
+
+
 public class InsertNewAction extends ActionSupport implements ModelDriven<InsertNew>, ServletRequestAware {
 
     HttpServletRequest request;
@@ -43,8 +50,8 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
         try {
             resultInsert = insertNew.insertSite(request);
         } catch (Exception e) {
-            System.out.println("Exception InsertNewSite");
-            resultInsert = "Exception InsertNewSite";
+            System.out.println(e.getMessage());
+            resultInsert = e.getMessage();
         }
         return ADMIN;
     }

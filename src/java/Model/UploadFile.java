@@ -8,15 +8,10 @@ package Model;
 import java.io.File;
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
-import static org.apache.struts2.ServletActionContext.getServletContext;
 
 
-@MultipartConfig(fileSizeThreshold=1024*1024*2, // 2MB
-                 maxFileSize=1024*1024*10,      // 10MB
-                 maxRequestSize=1024*1024*50)   // 50MB
 /**
  *
  * @author VGLukin
@@ -37,8 +32,10 @@ public class UploadFile {
      */
     protected String load(HttpServletRequest request) throws IOException, ServletException {
         String result = "";     
+        
+        String appPath = request.getSession().getServletContext().getRealPath("");
         // constructs path of the directory to save uploaded file
-        String savePath = request.getSession().getServletContext().getRealPath("");
+        String savePath = appPath + File.separator + SAVE_DIR;
         
         
         // creates the save directory if it does not exists
