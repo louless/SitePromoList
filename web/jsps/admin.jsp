@@ -23,7 +23,7 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>        
 
-            <s:form name="insertNew" action="insertNewForm" enctype="multipart/form-data" method="post">
+            <s:form name="insertNew" action="insertNewForm" enctype="multipart/form-data" method="post">                
                 <table >
                     <tbody>
                         <tr>
@@ -33,7 +33,7 @@
                                     <c:forEach var="row" items="${rubrics.rows}" >
                                         <option <c:if test="${param.idRubric == row.idRubric}" > 
                                                 selected
-                                                </c:if>
+                                            </c:if>
                                             value="${row.idRubric}">${row.rubricName}</option>
                                     </c:forEach>
                                 </select>  
@@ -49,20 +49,19 @@
                         </tr> 
                         <tr>
                             <td>
-                                
-                            </td>
-                            <td>
                                 <s:file label="Картинка" key="file" name="file" value="" width="50" />
                             </td>
                         </tr>
                         <tr>
-                            <td><s:submit value="Записать"/> </td> 
+                            <td>
+                                <s:submit value="Записать"/> 
+                            </td> 
                         </tr>               
                     </tbody>                
-                </table>  
+                </table> 
 
-            </s:form> 
-            <s:property value="resultInsert" default="Результат:"/>                              
+            </s:form>     
+            <s:property value="resultInsert" default=""/>                              
 
             <%@include file="../partjsp/bottom.jsp"%> 
         </div>

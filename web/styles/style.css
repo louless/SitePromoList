@@ -74,8 +74,17 @@ a:link:hover {
 
 .text-right{
     text-align: right;
-    /* margin-left: auto;  */
-    float: right;
+    width: 10%;
+    margin-right: 0; 
+    padding-right: 0;
+    float: right;   
+    right: 0;
+}
+
+.right{
+    width: max-content;
+    float:right;
+    margin: auto;
 }
 
 /* ///////////////////////////////////////////////////////
@@ -133,13 +142,21 @@ a:link:hover {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    width: 100px;
+    width: 7%;
 }
 
 #topmenu a:hover {
     border-radius: 20px 5px;
     background-color: #0066FF;
 }
+
+/*.topMenu-RightPart{
+    text-align: right;
+    float: right;
+    margin: auto;
+    width: 7%;
+    padding-right: 7%;
+}*/
 /*  элементы верхнего меню - черновик'
 #navbar {
   margin: 0;

@@ -11,6 +11,20 @@
             <result name="success">/jsps/success.jsp</result>
             <result name="login">/jsps/login.jsp</result>      
         </action>    
+        
+        <action name="admin">
+            <result>/jsps/admin.jsp</result>
+        </action>
+        <action name="login">
+            <result>/jsps/login.jsp</result>
+        </action>
+        <action name="testDB">
+            <result>/jsps/testDB.jsp</result>
+        </action>   
+        <action name="testJQuery">
+            <result>/jsps/testJQuery.jsp</result>
+        </action>         
+                                  
     </package>
     
 

@@ -17,12 +17,11 @@
             <%@include file="../partjsp/topmenu.jsp" %>        
             </br>
             </br>
-           
-                <a href="${pageContext.request.contextPath}/jsps/admin.jsp">Администратор</a>
-            
 
-
-
+            <s:form action="admin">
+                <s:submit value="Администратор"/>
+            </s:form>
+            <!--<a href="${pageContext.request.contextPath}/jsps/admin.jsp">Администратор</a>-->
 
 
 

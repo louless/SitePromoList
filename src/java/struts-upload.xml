@@ -9,7 +9,7 @@
     <!--5*1024*1024 = 5242880  5MB-->
     <constant name="struts.multipart.maxSize" value="5242880" /> 
     <package name="strutsUpload" extends="struts-default">
-        <action name="insertNewForm" class="Actions.InsertNewAction" method="InsertNewSite">
+        <action name="insertNewForm" class="Actions.InsertNewAction">
             <!--<param name="filesPath">myfiles</param>-->
             <result name="admin">/jsps/admin.jsp</result>  
  

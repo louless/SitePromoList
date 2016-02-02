@@ -8,6 +8,7 @@ package Model;
 import dbPackage.WorkDB;
 import java.io.File;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,20 +25,21 @@ public class InsertNew {
     private String url;
     private String siteName;
     private File file;
+    private String fileName;
 
     /**
      * вставка нового сайта
      *
      * @param request
-     * @return inserting status
+     * @return result insert
      * @throws java.sql.SQLException
      */
     public String insertSite(HttpServletRequest request) throws SQLException {
         String result = "";
         String result1 = "";
         String result2 = "";
-        //     result1 = saveIntoDB();  
-        result2 = saveIcon(request, file, url);
+        result1 = saveToDB();
+        result2 = saveIcon(request, file);
         if ((result1.equals("")) && (result2.equals(""))) {
             result = "";
         }
@@ -49,7 +51,7 @@ public class InsertNew {
      *
      * @return
      */
-    private boolean saveIntoDB() {
+    private String saveToDB() {
         try {
             WorkDB.getInstance().setQuery(
                     "insert into sitelist (idrubric, url, namesite) values (?, ?, ?)");
@@ -57,10 +59,17 @@ public class InsertNew {
             WorkDB.getInstance().getPstmt().setString(2, url);
             WorkDB.getInstance().getPstmt().setString(3, siteName);
             WorkDB.getInstance().PrepareQueryExe();
+
+            try (ResultSet rs = WorkDB.getInstance().SimpleQuery("SELECT LAST_INSERT_ID()")) {
+                while (rs.next()) {
+                    fileName = rs.getString(1);
+                }
+            }
         } catch (SQLException e) {
-            return false;
+            return e.getMessage();
         }
-        return true;
+
+        return "";
     }
 
     /**
@@ -68,20 +77,18 @@ public class InsertNew {
      *
      * @return
      */
-    private String saveIcon(HttpServletRequest request, File file, String fileName) {
+    private String saveIcon(HttpServletRequest request, File file) {
         String result;
         result = "";
         UploadFileStruts uploadFile = new UploadFileStruts();
-        try { 
-             result = uploadFile.load(request, file, fileName);
+        try {
+            result = uploadFile.load(request, file, fileName);
         } catch (IOException e) {
             return result;
         }
 
         return result;
     }
-
-
 
     public int getIdRubric() {
         return idRubric;

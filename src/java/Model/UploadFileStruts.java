@@ -35,7 +35,7 @@ public class UploadFileStruts {
             dir.mkdirs();
         }
 
-        String targetPath = dir.getPath() + File.separator + fileName;
+        String targetPath = dir.getPath() + File.separator + fileName + ".jpg";
         System.out.println("source file path ::" + file.getAbsolutePath());
         System.out.println("saving file to ::" + targetPath);
         File destinationFile = new File(targetPath);

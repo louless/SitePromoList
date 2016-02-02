@@ -27,7 +27,8 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
      * @return result
      * 
      */
-    public String InsertNewSite() {
+    @Override
+    public String execute() {
         resultInsert = "";
 
         System.out.println("idRubric=" + request.getParameter("idRubric"));

@@ -17,12 +17,24 @@
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>
 
-            <div class="text-right">              
-                <a href="${pageContext.request.contextPath}/jsps/testJQuery.jsp" >Тест JQuery</a> 
-                <a href="${pageContext.request.contextPath}/jsps/testDB.jsp" >Тест соединения</a> 
-                <a href="${pageContext.request.contextPath}/jsps/admin.jsp">Администратор</a>
-                <a href="${pageContext.request.contextPath}/jsps/login.jsp" >Войти</a> 
-            </div>  
+            <div class="right">
+                <div class="right">   
+                    <s:form action="login">
+                        <s:submit value="Войти"/>
+                    </s:form>
+                </div> 
+                <div class="right">   
+                    <s:form action="testDB">
+                        <s:submit value="Тест соединения"/>
+                    </s:form>  
+                </div> 
+                <div class="right">       
+                    <s:form action="testJQuery">
+                        <s:submit value="Тест JQuery"/>
+                    </s:form>
+                </div>      
+                 
+            </div>
 
             <p>  <jsp:text> У нас самые популярные 
                     сайты в интернете, разбитые по категориям для удобства на любой вкус!
@@ -35,10 +47,6 @@
             </div>
 
             <%@include file="../partjsp/mainMenu.jsp"%>              
-           
-<!--            <div class="center"> 
-                <p>  Список сайтов на определенную тему</p>
-            </div>            -->
 
             </br>
             <div class="promo-box-right">
@@ -46,7 +54,7 @@
             </div>            
 
             <!--ajax-->
-            
+
             <div id="content_center"> </div>   
 
             <div class="clear-float"></div>

@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="submit" value="Войти" name="OK" </input> 
+                            <td><s:submit value="Войти" name="OK" /> 
                             </td>
                         </tr>
                         <tr>
