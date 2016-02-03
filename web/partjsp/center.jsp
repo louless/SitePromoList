@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="Model.Site"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : center
@@ -23,7 +25,7 @@
         <link href="${pageContext.request.contextPath}/styles/style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <sql:query var="result" scope="session" dataSource="jdbc/userdb">
+        <sql:query var="result" scope="session" dataSource="jdbc/userdb"> 
             SELECT idsite, url, namesite FROM sitelist where idrubric = ${param.idrubric}
         </sql:query>
 
@@ -31,11 +33,34 @@
         <div class="center">
             <table>
                 <c:forEach var="row" items="${result.rows}">
-                    <tr>         
+                    <tr>     
+                        <td> <img src="returnImage?idsite=${row.idsite}" />        
+                        </td>
                         <td> <a href="http://<c:out value="${row.url}" default="#"/>" > <c:out value="${row.namesite}"/> </a> </td>
                     </tr>
                 </c:forEach>
             </table>
+
+            <%
+                List<Site> sites1 = (List<Site>) request.getAttribute("sites");
+                if (sites1 != null) {
+                    for (Site site : sites1) {
+                        out.println("<br/>" + site.getUrl());
+                    }
+                }
+            %>
+
+
+            <table>
+                <c:forEach var="site" items="${sites1}">
+                    <tr>     
+                        <td> <a href="http://<c:out value="${site.url}" default="#"/>" > <c:out value="${site.namesite}"/> </a> </td>
+                    </tr>
+                </c:forEach>
+            </table>
+
+
+
         </div>
 
 

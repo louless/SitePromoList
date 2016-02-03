@@ -61,7 +61,7 @@
                 </table> 
 
             </s:form>     
-            <s:property value="resultInsert" default=""/>                              
+            <s:property value="resultInsert" default="" />                              
 
             <%@include file="../partjsp/bottom.jsp"%> 
         </div>

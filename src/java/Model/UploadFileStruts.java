@@ -21,7 +21,9 @@ public class UploadFileStruts {
 
     public String load(HttpServletRequest request, File file, String fileName) throws IOException {
         String success = "";
-        saveFile(file, fileName, request.getSession().getServletContext().getRealPath("") + File.separator + filesPath);
+      //  request.getSession().getServletContext().getRealPath("")
+        String directory = request.getContextPath() + File.separator + filesPath;
+        saveFile(file, fileName, directory);
 
         return success;
     }

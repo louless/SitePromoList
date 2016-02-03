@@ -14,8 +14,8 @@
         <script type="text/javascript" src="../lib/jquery.js"></script>
     </head>
     <body>
-        <!--<form id="mainMenuForm">-->
-        <ul id="mainmenu"> 
+        <!--<form action="siteList" >-->
+            <ul id="mainmenu"> 
             <li value="1">  <a href="#"> Спорт         </a></li>
             <li value="2">  <a href="#"> Кино          </a></li>
             <li value="3">  <a href="#"> Магазины      </a></li>           
@@ -32,22 +32,22 @@
             <li value="14"> <a href="#"> Природа       </a></li>
             <li value="15"> <a href="#"> История       </a></li>
         </ul> 
-        <!--        </form>-->
+<!--            <input type="submit" >
+        </form>-->
 
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#mainmenu li').click(function () {
-//                    $('li').click(function () {
                         $.ajax({
                             type: 'POST',
-                            url: "../partjsp/center.jsp",
+//                            url: "../partjsp/center.jsp",
+                            url: "siteList",
                             data: "idrubric=" + $(this).val(),
                             success: function (html) {
                                 $("#content_center").html(html);
                             }
                         });
                         return false;
-//                    });
                 });
             });
         </script>

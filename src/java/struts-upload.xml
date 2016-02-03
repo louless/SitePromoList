@@ -18,6 +18,10 @@
                 <param name="fileUpload.allowedTypes">text/plain,image/jpeg</param>
             </interceptor-ref>
         </action>   
+        
+        <action name="siteList" class="Actions.GetDataAction" method="getSiteList">
+            <result name="center">/partjsp/center.jsp</result>
+        </action>
     </package>  
         
         
