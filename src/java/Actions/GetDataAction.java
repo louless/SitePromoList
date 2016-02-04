@@ -14,13 +14,13 @@ import com.opensymphony.xwork2.ModelDriven;
  * @author VGLukin
  */
 public class GetDataAction extends ActionSupport implements ModelDriven<GetData>{
-    private static final String CENTER  = "center";
-    private GetData getData = new GetData();
+    private static final String CENTER  = "center"; 
+    private GetData getData = new GetData();    
     
     public String getSiteList(){
         System.out.println();
-        getData.getListSite();
-      
+        String result = getData.getListSite();
+        System.out.println(result);
       
         return CENTER;
     }

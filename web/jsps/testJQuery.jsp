@@ -15,7 +15,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
-        <script type="text/javascript" src="../lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
         <title>Testing JQuery</title>
     </head>
     <body>
@@ -34,7 +34,7 @@
 //                    обработка при нажатии на кнопку button1
                     $('#button1').click(function () {
                         $.ajax({
-                            url: "../partjsp/center.jsp",
+                            url: "/PList/partjsp/center.jsp",
                             cache: false,
                             success: function (html) {
                                 $("#MyContent").html(html);
@@ -45,7 +45,7 @@
                     $('#formPostName').submit(function () {
                         $.ajax({
                             type: 'POST',
-                            url: "../partjsp/center.jsp",
+                            url: "/PList/partjsp/center.jsp",
                             data: "idname=" + $("#namePost").val() + "&idrubric=2",                           
                             success: function (html) {
                                 $("#MyContent").html(html);

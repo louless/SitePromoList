@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
-        <script type="text/javascript" src="../lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
         <title>Welcome for you!</title>
     </head>
     <body>        
@@ -33,7 +33,7 @@
                         <s:submit value="Тест JQuery"/>
                     </s:form>
                 </div>      
-                 
+
             </div>
 
             <p>  <jsp:text> У нас самые популярные 
@@ -55,7 +55,8 @@
 
             <!--ajax-->
 
-            <div id="content_center"> </div>   
+            <div id="content_center"> </div> 
+
 
             <div class="clear-float"></div>
 

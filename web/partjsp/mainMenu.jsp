@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <script type="text/javascript" src="../lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
     </head>
     <body>
         <!--<form action="siteList" >-->
