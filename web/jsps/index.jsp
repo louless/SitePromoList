@@ -54,7 +54,6 @@
             </div>            
 
             <!--ajax-->
-
             <div id="content_center"> </div> 
 
 

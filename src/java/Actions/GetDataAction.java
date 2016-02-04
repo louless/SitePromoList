@@ -8,20 +8,24 @@ package Actions;
 import Model.GetData;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import java.io.File;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts2.interceptor.ServletRequestAware;
 
 /**
  *
  * @author VGLukin
  */
-public class GetDataAction extends ActionSupport implements ModelDriven<GetData>{
+public class GetDataAction extends ActionSupport implements ModelDriven<GetData>, ServletRequestAware{
     private static final String CENTER  = "center"; 
     private GetData getData = new GetData();    
+    HttpServletRequest request;
     
     public String getSiteList(){
         System.out.println();
-        String result = getData.getListSite();
+        String result = getData.getListSite(request);
         System.out.println(result);
-      
+
         return CENTER;
     }
 
@@ -29,6 +33,17 @@ public class GetDataAction extends ActionSupport implements ModelDriven<GetData>
     public GetData getModel() {
         return getData;
     }
+
+    @Override
+    public void setServletRequest(HttpServletRequest hsr) {
+        this.request = hsr;
+    }
+
+    public HttpServletRequest getRequest() {
+        return request;
+    }
+   
+    
     
     
     

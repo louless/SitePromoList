@@ -25,15 +25,13 @@
             <table>
                 <c:forEach var="site" items="${sites}">
                     <tr>
-                        <td> <a href="http://<c:out value="${site.url}" default="#"/>" > <c:out value="${site.nameSite}"/> </a> </td>
+                        <td> <img src="<c:out value="${site.imagePath}" />" /></td>
+   
+                        <td> <a href="http://<c:out value="${site.url}" default="#"/>" > <c:out value="${site.nameSite}"/> </a> (${site.idSite})</td>
                     </tr>
                 </c:forEach>
-            </table>
-
-
-
+            </table>  
         </div>
-
 
     </body>
 </html>

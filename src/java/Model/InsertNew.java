@@ -37,9 +37,10 @@ public class InsertNew {
     public String insertSite(HttpServletRequest request) throws SQLException {
         String result = "";
         String result1 = "";
-        String result2 = "";
+        String result2 = "";       
         result1 = saveToDB();
         result2 = saveIcon(request, file);
+        result = result1 + result2;
         if ((result1.equals("")) && (result2.equals(""))) {
             result = "";
         }
@@ -66,6 +67,7 @@ public class InsertNew {
                 }
             }
         } catch (SQLException e) {
+            System.out.println(e.getMessage());
             return e.getMessage();
         }
 

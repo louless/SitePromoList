@@ -13,6 +13,7 @@ public class Site {
     private int idSite;
     private String url;
     private String nameSite;
+    private String imagePath;
 
     public int getIdSite() {
         return idSite;
@@ -36,6 +37,14 @@ public class Site {
 
     public void setNameSite(String nameSite) {
         this.nameSite = nameSite;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
     
     
