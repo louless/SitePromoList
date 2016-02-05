@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Actions;
+package UploadPackage.Actions;
 
-import Model.InsertNew;
+import UploadPackage.ModelClasses.InsertNew;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import javax.servlet.http.HttpServletRequest;

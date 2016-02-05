@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Actions;
+package GetDataPackage.Actions;
 
-import Model.GetData;
+import GetDataPackage.ModelClasses.GetData;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import java.io.File;
