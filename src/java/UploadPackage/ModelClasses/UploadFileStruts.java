@@ -16,16 +16,13 @@ import javax.servlet.http.HttpServletRequest;
  * @author VGLukin
  */
 public class UploadFileStruts {
-    private String filesPath = "icons";
-    
+    public static String filesPath = "icons";
 
     public String load(HttpServletRequest request, File file, String fileName) throws IOException {
         String success = "";
-        String directory = request.getSession().getServletContext().getRealPath("/");
-      //  directory = request.getContextPath() + File.separator + filesPath;
-        directory = directory + File.separator + filesPath;
-        saveFile(file, fileName, directory);
+        String directory = request.getContextPath() + File.separator + filesPath;  // windows: c:\Plist\icons\
 
+        saveFile(file, fileName, directory);
         return success;
     }
 
@@ -33,14 +30,17 @@ public class UploadFileStruts {
         FileInputStream in = null;
         FileOutputStream out = null;
 
+   //     System.out.println("as dir:" + filesDirectory);
         File dir = new File(filesDirectory);
+   //     System.out.println("as FilePath" + dir.getPath());
+    //    System.out.println("as absolute FilePath" + dir.getAbsolutePath());
         if (!dir.exists()) {
             dir.mkdirs();
         }
 
         String targetPath = dir.getPath() + File.separator + fileName + ".jpg";
-        System.out.println("source file path ::" + file.getAbsolutePath());
-        System.out.println("saving file to ::" + targetPath);
+        System.out.println("source file path is:" + file.getAbsolutePath());
+        System.out.println("saving file is:" + targetPath);
         File destinationFile = new File(targetPath);
         try {
             in = new FileInputStream(file);

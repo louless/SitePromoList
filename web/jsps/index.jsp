@@ -32,7 +32,12 @@
                     <s:form action="testJQuery">
                         <s:submit value="Тест JQuery"/>
                     </s:form>
-                </div>      
+                </div>    
+                <div class="right">       
+                    <s:form action="admin">
+                        <s:submit value="админ"/>
+                    </s:form>
+                </div> 
 
             </div>
 

@@ -25,12 +25,23 @@
             <table>
                 <c:forEach var="site" items="${sites}">
                     <tr>
-                        <td> <img src="<c:out value="${site.imagePath}" />" /></td>
-   
+                        <td>${site.imagePath}</td>
+                        <td>${pageContext.request.contextPath}icons <c:out value="${site.idSite}"/>.jpg </td>
+                        <td> <img src="${pageContext.request.contextPath}icons<c:out value="${site.idSite}.jpg" />"</td>
+                        <td> <img src="<c:out value="${site.imagePath}"/>" />  </td>  
                         <td> <a href="http://<c:out value="${site.url}" default="#"/>" > <c:out value="${site.nameSite}"/> </a> (${site.idSite})</td>
                     </tr>
                 </c:forEach>
             </table>  
+            
+            
+            <img src="${pageContext.request.contextPath}/icons/44.jpg" />
+            <img src="/icons/44.jpg" />   
+            <img src="icons/44.jpg" /> 
+            <img src="${pageContext.session.servletContext.contextPath}/icons/44.jpg" /> 
+            <img src="${pageContext.session.servletContext.getRealPath("/")}/icons/44.jpg" /> 
+       
+            
         </div>
 
     </body>

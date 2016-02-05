@@ -22,11 +22,33 @@ public class GetDataAction extends ActionSupport implements ModelDriven<GetData>
     HttpServletRequest request;
     
     public String getSiteList(){
-        System.out.println();
+     
+    //  String directory = getDirectory();
+  //      File dir  = new File(directory);
+ //       if (!dir.exists()){
+  //          dir.mkdir();
+     ///   }
         String result = getData.getListSite(request);
         System.out.println(result);
 
         return CENTER;
+    }
+    
+    // не используется (проверка на ОС)
+    private String getDirectory(){
+         //  String directory = File.separator + "home" + File.separator + "glassfish" + File.separator + "icons";
+        String dir;
+        String OS;
+        OS = System.getProperty("os.name");        
+        if (OS.contains("Windows")){
+            dir = "c:" + File.separator + "home" + File.separator + "glassfish" + File.separator + "icons";
+        }else{
+            dir = File.separator + "home" + File.separator + "glassfish" + File.separator + "icons";
+        } 
+        System.out.print(OS); 
+        System.out.print(dir); 
+        
+        return dir;
     }
 
     @Override

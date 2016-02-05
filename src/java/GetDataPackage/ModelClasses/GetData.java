@@ -5,6 +5,7 @@
  */
 package GetDataPackage.ModelClasses;
 
+import UploadPackage.ModelClasses.UploadFileStruts;
 import dbPackage.WorkDB;
 import java.io.File;
 import java.sql.ResultSet;
@@ -25,8 +26,8 @@ public class GetData  {
 
     public String getListSite(HttpServletRequest request) {
         String result = "";
-        String directory = request.getContextPath() + File.separator + "icons";     
-        
+        String directory = request.getContextPath() + File.separator + UploadFileStruts.filesPath;     
+     //   File dir = new File(directory);
         sites = new ArrayList();
         try {
             rs = WorkDB.getInstance().SimpleQuery("SELECT idsite, url, namesite FROM sitelist where idrubric = " + idrubric);
@@ -35,7 +36,10 @@ public class GetData  {
                 site.setIdSite(rs.getInt("idsite"));
                 site.setUrl(rs.getString("url"));
                 site.setNameSite(rs.getString("namesite"));
-                String imagePath = directory + File.separator + site.getIdSite() + ".jpg";
+              //  String imagePath = dir.getPath() + File.separator + site.getIdSite() + ".jpg";
+                File dir = new File(directory, site.getIdSite() + ".jpg");
+                String imagePath = dir.getPath();
+         //       System.out.println(imagePath);
                 site.setImagePath(imagePath);  
                 sites.add(site);    
             }
