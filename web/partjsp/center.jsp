@@ -40,6 +40,7 @@
             <img src="icons/44.jpg" /> 
             <img src="${pageContext.session.servletContext.contextPath}/icons/44.jpg" /> 
             <img src="${pageContext.session.servletContext.getRealPath("/")}/icons/44.jpg" /> 
+            ${testImage}
        
             
         </div>

@@ -18,16 +18,15 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author VGLukin
  */
-public class GetData  {
+public class GetData {
 
     private ResultSet rs;
     private int idrubric;
-    private List <Site> sites;
+    private List<Site> sites;
 
     public String getListSite(HttpServletRequest request) {
         String result = "";
-        String directory = request.getContextPath() + File.separator + UploadFileStruts.filesPath;     
-     //   File dir = new File(directory);
+    //    String directory = request.getContextPath() + File.separator + UploadFileStruts.filesPath;
         sites = new ArrayList();
         try {
             rs = WorkDB.getInstance().SimpleQuery("SELECT idsite, url, namesite FROM sitelist where idrubric = " + idrubric);
@@ -36,12 +35,13 @@ public class GetData  {
                 site.setIdSite(rs.getInt("idsite"));
                 site.setUrl(rs.getString("url"));
                 site.setNameSite(rs.getString("namesite"));
-              //  String imagePath = dir.getPath() + File.separator + site.getIdSite() + ".jpg";
+/*
                 File dir = new File(directory, site.getIdSite() + ".jpg");
-                String imagePath = dir.getPath();
-         //       System.out.println(imagePath);
-                site.setImagePath(imagePath);  
-                sites.add(site);    
+                site.setImagePath(dir.getPath());*/
+          //      http://balusc.omnifaces.org/2007/04/imageservlet.html
+            //    http://ru.vingrad.com/otobrazheniye-image-byte[]-ispolzuya-struts-2-id50bb5ef46ccc19482200700c
+            // http://www.programcreek.com/2009/02/java-convert-image-to-byte-array-convert-byte-array-to-image/
+                sites.add(site);
             }
             rs.close();
         } catch (SQLException ex) {
@@ -75,8 +75,5 @@ public class GetData  {
     public void setSites(List<Site> sites) {
         this.sites = sites;
     }
-
-
-    
 
 }

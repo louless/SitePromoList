@@ -22,6 +22,14 @@
         <action name="siteList" class="GetDataPackage.Actions.GetDataAction" method="getSiteList">
             <result name="center">/partjsp/center.jsp</result>
         </action>
+        
+        <action name="getImage" class="GetDataPackage.ModelClasses.GetImage">
+            <result name="success" type="stream">
+                <param name="contentType">image/jpeg</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">contentDisposition</param>
+            </result>
+        </action>
     </package>  
         
         
