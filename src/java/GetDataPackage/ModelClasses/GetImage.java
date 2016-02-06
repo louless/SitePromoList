@@ -6,6 +6,7 @@
 package GetDataPackage.ModelClasses;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 /**
@@ -18,24 +19,14 @@ public class GetImage {
     private String contentType;
     private String contentDisposition;
     private String imagePath;
-    
- 
-    public String execute() {
-        String result = "";
-      //  ByteArray byteArray;
-      //  inputStream = new ByteArrayInputStream(byteArray);        
-        
-        
- 
-        
 
+    public String execute() throws IOException {
+        String result = "";
+        byte[] byteArray = ConvertImage.convertImageToByte(imagePath);
+        inputStream = new ByteArrayInputStream(byteArray);
         return "success";
     }
 
-    
-    
-    
-    
     public InputStream getInputStream() {
         return inputStream;
     }
@@ -68,9 +59,4 @@ public class GetImage {
         this.imagePath = imagePath;
     }
 
-    
-    
-    
-    
-    
 }
