@@ -38,7 +38,7 @@
                         <s:submit value="админ"/>
                     </s:form>
                 </div> 
-
+            <div class="clear-float"></div>
             </div>
 
             <p>  <jsp:text> У нас самые популярные 
@@ -62,7 +62,7 @@
             <div id="content_center"> </div> 
 
 
-            <div class="clear-float"></div>
+            <div class="clear-float-left"></div>
 
             <div class="promo-box-left">
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
