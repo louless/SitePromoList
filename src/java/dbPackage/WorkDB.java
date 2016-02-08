@@ -10,13 +10,17 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
 /**
  *
  * @author Владимир
  */
 public class WorkDB {
-
+    String ConPullName = "jdbc/userdb";
+    DataSource ds;
     Connection con;
     String query;
     PreparedStatement pstmt;
@@ -31,16 +35,23 @@ public class WorkDB {
                 System.out.println("Exception while preparing query");
             }
         }
-          
+
     }
 
-    private WorkDB() {
-        String dbName = "jdbc:mysql://localhost:3306/userdb?zeroDateTimeBehavior=convertToNull";
+    private WorkDB(){
+        try{
+        this.ds = InitialContext.doLookup(ConPullName);
+        }catch(NamingException ne){
+            System.out.println("Exception while get Connection Pool");
+            System.out.println(ne.getMessage());
+        }
+        /*  String dbName = "jdbc:mysql://localhost:3306/userdb?zeroDateTimeBehavior=convertToNull";
         String username = "root";
-        String password = "3difficul1";
+        String password = "13pass";*/
         con = null;
         try {
-            con = DriverManager.getConnection(dbName, username, password);
+            //con = DriverManager.getConnection(dbName, username, password);
+            con = ds.getConnection();
         } catch (SQLException sqle) {
             System.out.println("Cannot connection to DB");
         }
@@ -51,12 +62,12 @@ public class WorkDB {
     }
 
     private static class WorkDBHolder {
-
         private static final WorkDB INSTANCE = new WorkDB();
-    }
 
-    /* заранее подготовленный запрос (для Insert, Update..)*/
-    public void PrepareQueryExe() throws SQLException{        
+}
+
+/* заранее подготовленный запрос (для Insert, Update..)*/
+public void PrepareQueryExe() throws SQLException{        
         pstmt.executeUpdate();
     }
 
@@ -88,4 +99,3 @@ public class WorkDB {
     }
 
 }
-
