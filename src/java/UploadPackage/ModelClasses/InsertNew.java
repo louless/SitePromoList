@@ -61,7 +61,7 @@ public class InsertNew {
             WorkDB.getInstance().getPstmt().setString(2, url);
             System.out.println(siteName);
             try {
-                WorkDB.getInstance().getPstmt().setBytes(3, siteName.getBytes("UTF-8"));
+                WorkDB.getInstance().getPstmt().setBytes(3, siteName.getBytes("cp1251"));
             } catch (UnsupportedEncodingException e) {
                 System.out.println(e.getMessage());
                 return e.getMessage();
