@@ -8,6 +8,7 @@ package UploadPackage.ModelClasses;
 import dbPackage.WorkDB;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
@@ -37,7 +38,7 @@ public class InsertNew {
     public String insertSite(HttpServletRequest request) throws SQLException {
         String result = "";
         String result1 = "";
-        String result2 = "";       
+        String result2 = "";
         result1 = saveToDB();
         result2 = saveIcon(request, file);
         result = result1 + result2;
@@ -58,7 +59,13 @@ public class InsertNew {
                     "insert into sitelist (idrubric, url, namesite) values (?, ?, ?)");
             WorkDB.getInstance().getPstmt().setInt(1, idRubric);
             WorkDB.getInstance().getPstmt().setString(2, url);
-            WorkDB.getInstance().getPstmt().setString(3, siteName);
+            System.out.println(siteName);
+            try {
+                WorkDB.getInstance().getPstmt().setBytes(3, siteName.getBytes("UTF-8"));
+            } catch (UnsupportedEncodingException e) {
+                System.out.println(e.getMessage());
+                return e.getMessage();
+            }
             WorkDB.getInstance().PrepareQueryExe();
 
             try (ResultSet rs = WorkDB.getInstance().SimpleQuery("SELECT LAST_INSERT_ID()")) {
