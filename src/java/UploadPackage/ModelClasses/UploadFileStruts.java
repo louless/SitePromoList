@@ -16,12 +16,14 @@ import javax.servlet.http.HttpServletRequest;
  * @author VGLukin
  */
 public class UploadFileStruts {
+
     public static String filesPath = "icons";
+    public static String fullFilesPath = "/home/glassfish/icons";
 
     public String load(HttpServletRequest request, File file, String fileName) throws IOException {
         String success = "";
-        String directory = request.getContextPath() + File.separator + filesPath;  // windows: c:\Plist\icons\
-
+        //   String directory = request.getContextPath() + File.separator + filesPath;  // windows: c:\Plist\icons\
+        String directory = fullFilesPath;
         saveFile(file, fileName, directory);
         return success;
     }
@@ -30,10 +32,10 @@ public class UploadFileStruts {
         FileInputStream in = null;
         FileOutputStream out = null;
 
-   //     System.out.println("as dir:" + filesDirectory);
+        //     System.out.println("as dir:" + filesDirectory);
         File dir = new File(filesDirectory);
-   //     System.out.println("as FilePath" + dir.getPath());
-    //    System.out.println("as absolute FilePath" + dir.getAbsolutePath());
+        //     System.out.println("as FilePath" + dir.getPath());
+        //    System.out.println("as absolute FilePath" + dir.getAbsolutePath());
         if (!dir.exists()) {
             dir.mkdirs();
         }

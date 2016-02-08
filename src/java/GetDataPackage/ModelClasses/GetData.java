@@ -26,7 +26,7 @@ public class GetData {
 
     public String getListSite(HttpServletRequest request) {
         String result = "";
-    //    String directory = request.getContextPath() + File.separator + UploadFileStruts.filesPath;
+        String directory = UploadFileStruts.fullFilesPath;//request.getContextPath() + File.separator + UploadFileStruts.filesPath;
         sites = new ArrayList();
         try {
             rs = WorkDB.getInstance().SimpleQuery("SELECT idsite, url, namesite FROM sitelist where idrubric = " + idrubric);
@@ -35,9 +35,9 @@ public class GetData {
                 site.setIdSite(rs.getInt("idsite"));
                 site.setUrl(rs.getString("url"));
                 site.setNameSite(rs.getString("namesite"));
-/*
+
                 File dir = new File(directory, site.getIdSite() + ".jpg");
-                site.setImagePath(dir.getPath());*/
+                site.setImagePath(dir.getPath());
           //      http://balusc.omnifaces.org/2007/04/imageservlet.html
             //    http://ru.vingrad.com/otobrazheniye-image-byte[]-ispolzuya-struts-2-id50bb5ef46ccc19482200700c
             // http://www.programcreek.com/2009/02/java-convert-image-to-byte-array-convert-byte-array-to-image/
