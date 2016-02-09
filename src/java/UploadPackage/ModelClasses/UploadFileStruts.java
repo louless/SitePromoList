@@ -35,7 +35,7 @@ public class UploadFileStruts {
         FileInputStream in = null;
         FileOutputStream out = null;
 
-      //  scaleImage(fileTemp);
+        scaleImage(fileTemp);
         File dir = new File(filesDirectory);     
         if (!dir.exists()) {
             dir.mkdirs();
