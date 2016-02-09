@@ -10,6 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.interceptor.ServletRequestAware;
+
 /**
  *
  * @author VGLukin
@@ -25,7 +26,7 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
      * запись нового сайта: урл в базу и картинку в файл
      *
      * @return result
-     * 
+     *
      */
     @Override
     public String execute() {
@@ -34,12 +35,7 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
         System.out.println("idRubric=" + request.getParameter("idRubric"));
         System.out.println("url=" + request.getParameter("url"));
         System.out.println("Site name=" + request.getParameter("siteName"));
-        try {
-            resultInsert = insertNew.insertSite(request);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            resultInsert = e.getMessage();
-        }
+        resultInsert = insertNew.insertSite(request);
         return ADMIN;
     }
 

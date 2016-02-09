@@ -33,13 +33,16 @@ public class InsertNew {
      *
      * @param request
      * @return result insert
-     * @throws java.sql.SQLException
      */
-    public String insertSite(HttpServletRequest request) throws SQLException {
+    public String insertSite(HttpServletRequest request){
         String result = "";
         String result1 = "";
         String result2 = "";
         result1 = saveToDB();
+        if (fileName == null){
+            result = "file name is null";
+            return result;
+        }
         result2 = saveIcon(request, file);
         result = result1 + result2;
         if ((result1.equals("")) && (result2.equals(""))) {
@@ -50,7 +53,6 @@ public class InsertNew {
 
     /**
      * сохранение сайта в базу
-     *
      * @return
      */
     private String saveToDB() {
@@ -83,12 +85,10 @@ public class InsertNew {
 
     /**
      * сохранение иконки сайта в папку
-     *
      * @return
      */
     private String saveIcon(HttpServletRequest request, File file) {
-        String result;
-        result = "";
+        String result = "";
         UploadFileStruts uploadFile = new UploadFileStruts();
         try {
             result = uploadFile.load(request, file, fileName);

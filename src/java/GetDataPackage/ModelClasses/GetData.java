@@ -38,9 +38,6 @@ public class GetData {
 
                 File dir = new File(directory, site.getIdSite() + ".jpg");
                 site.setImagePath(dir.getPath());
-          //      http://balusc.omnifaces.org/2007/04/imageservlet.html
-            //    http://ru.vingrad.com/otobrazheniye-image-byte[]-ispolzuya-struts-2-id50bb5ef46ccc19482200700c
-            // http://www.programcreek.com/2009/02/java-convert-image-to-byte-array-convert-byte-array-to-image/
                 sites.add(site);
             }
             rs.close();
