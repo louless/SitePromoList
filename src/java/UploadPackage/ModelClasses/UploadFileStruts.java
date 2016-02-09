@@ -25,8 +25,11 @@ public class UploadFileStruts {
     public static String fullFilesPath = "/home/glassfish/icons";
 
     public String load(HttpServletRequest request, File file, String fileName) throws IOException {
-        String success = "";
-        success = saveFile(file, fileName, fullFilesPath);
+        String success = "";       
+        
+        success = saveFile(file, fileName + "_", fullFilesPath);
+        scaleImage(file);
+        success = success + saveFile(file, fileName, fullFilesPath);
         return success;
     }
 
@@ -35,7 +38,6 @@ public class UploadFileStruts {
         FileInputStream in = null;
         FileOutputStream out = null;
 
-        scaleImage(fileTemp);
         File dir = new File(filesDirectory);     
         if (!dir.exists()) {
             dir.mkdirs();

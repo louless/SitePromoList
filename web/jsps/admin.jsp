@@ -29,7 +29,7 @@
                         <tr>
                             <td>
                                 <strong>Рубрика:</strong>
-                                <select key="idRubric" name="idRubric" >
+                                <select required key="idRubric" name="idRubric" >
                                     <c:forEach var="row" items="${rubrics.rows}" >
                                         <option <c:if test="${param.idRubric == row.idRubric}" > 
                                                 selected
@@ -37,7 +37,13 @@
                                             value="${row.idRubric}">${row.rubricName}</option>
                                     </c:forEach>
                                 </select>  
-                            </td>                        
+                            </td>  
+<!--                            <td>
+                               <s:submit value="Найти" name="find"/>  
+                            </td>
+                            <td>
+                                
+                            </td>-->
                         </tr>
                         <tr>
                             <td><s:textfield label="Ссылка" key="url"/> 
@@ -54,7 +60,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <s:submit value="Записать"/> 
+                                <s:submit value="Записать" name="insert"/> 
                             </td> 
                         </tr>               
                     </tbody>                
