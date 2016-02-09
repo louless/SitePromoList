@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(document).ready(function () {
+$(function () {
     $('#mainmenu li').click(function () {
         $.ajax({
             type: 'POST',
@@ -16,5 +16,18 @@ $(document).ready(function () {
         });
         return false;
     });
+   
+    $('#idRubric').change(function () {
+        $.ajax({
+            type: 'POST',
+            url: "siteListEdit",
+            data: "idrubric=" + $(this).val(),
+            success: function (html) {
+                $("#content_sitelist").html(html);
+            }
+        });
+        return false;
+    });    
+    
 });
 

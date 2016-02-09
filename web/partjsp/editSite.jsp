@@ -8,11 +8,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
-<sql:query var="sites" dataSource="jdbc/userdb" >
-    SELECT idsite, url, namesite FROM sitelist where 
-</sql:query> 
 
 <!DOCTYPE html>
 <html>
@@ -21,10 +17,10 @@
     </head>
     <body>
         <select multiple>
-            
-            
-            
+            <c:forEach var="site" items="${sites}" >
+                <option  value="${site.idsite}">${site.nameSite} </option>
+            </c:forEach>   
         </select>
-        
+
     </body>
 </html>

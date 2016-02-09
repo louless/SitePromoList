@@ -17,6 +17,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
+        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
         <title>Welcome for you!</title>
     </head>
     <body>
@@ -31,19 +33,19 @@
                                 <strong>Рубрика:</strong>
                                 <select required key="idRubric" name="idRubric" >
                                     <c:forEach var="row" items="${rubrics.rows}" >
-                                        <option <c:if test="${param.idRubric == row.idRubric}" > 
+                                        <option 
+                                            <c:if test="${param.idRubric == row.idRubric}" > 
                                                 selected
                                             </c:if>
-                                            value="${row.idRubric}">${row.rubricName}</option>
+                                            value="${row.idRubric}">${row.rubricName}
+                                        </option>
                                     </c:forEach>
                                 </select>  
                             </td>  
-<!--                            <td>
-                               <s:submit value="Найти" name="find"/>  
-                            </td>
                             <td>
-                                
-                            </td>-->
+                                <div class="content_sitelist"> </div>
+                            </td>
+
                         </tr>
                         <tr>
                             <td><s:textfield label="Ссылка" key="url"/> 

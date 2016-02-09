@@ -18,6 +18,7 @@ import org.apache.struts2.interceptor.ServletRequestAware;
  */
 public class GetDataAction extends ActionSupport implements ModelDriven<GetData>, ServletRequestAware{
     private static final String CENTER  = "center"; 
+    private static final String EDIT  = "editSite";
     private GetData getData = new GetData();    
     HttpServletRequest request;
     
@@ -33,6 +34,11 @@ public class GetDataAction extends ActionSupport implements ModelDriven<GetData>
 
         return CENTER;
     }
+    
+    public String getSiteEdit(){
+        String result = getData.getListSite(request);
+        return EDIT;
+    }    
     
     // не используется (проверка на ОС)
     private String getDirectory(){

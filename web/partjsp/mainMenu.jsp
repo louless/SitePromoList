@@ -12,10 +12,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
         <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
     </head>
     <body>
         <!--<form action="siteList" >-->
-            <ul id="mainmenu"> 
+        <ul id="mainmenu"> 
             <li value="1">  <a href="#"> Спорт         </a></li>
             <li value="2">  <a href="#"> Кино          </a></li>
             <li value="3">  <a href="#"> Магазины      </a></li>           
@@ -34,25 +35,8 @@
             <li value="16"> <a href="#"> Новости       </a></li>
             <li value="17"> <a href="#"> Недвижимость  </a></li>            
         </ul> 
-<!--            <input type="submit" >
-        </form>-->
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#mainmenu li').click(function () {
-                        $.ajax({
-                            type: 'POST',
-//                            url: "../partjsp/center.jsp",
-                            url: "siteList",
-                            data: "idrubric=" + $(this).val(),
-                            success: function (html) {
-                                $("#content_center").html(html);
-                            }
-                        });
-                        return false;
-                });
-            });
-        </script>
+        <!--            <input type="submit" >
+                </form>-->
 
 
     </body>
