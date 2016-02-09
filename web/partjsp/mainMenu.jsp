@@ -31,6 +31,8 @@
             <li value="13"> <a href="#"> Красота       </a></li>
             <li value="14"> <a href="#"> Природа       </a></li>
             <li value="15"> <a href="#"> История       </a></li>
+            <li value="16"> <a href="#"> Новости       </a></li>
+            <li value="17"> <a href="#"> Недвижимость  </a></li>            
         </ul> 
 <!--            <input type="submit" >
         </form>-->

@@ -48,9 +48,6 @@ public class GetData {
         return result;
 
     }
-    
-    
-    
 
     public ResultSet getRs() {
         return rs;

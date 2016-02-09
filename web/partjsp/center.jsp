@@ -26,7 +26,7 @@
                 <c:forEach var="site" items="${sites}">
                     <tr>
                         <td> <img src="getImage?imagePath=${site.imagePath}"/> </td>
-                        <td> <a href="http://<c:out value="${site.url}" default="#"/>" > <c:out value="${site.nameSite}"/> </a> (${site.idSite})</td>
+                        <td> <a href="http://<c:out value="${site.url}" default="#"/>" target="_blank"> <c:out value="${site.nameSite}"/> </a> (${site.idSite})</td>
                     </tr>
                 </c:forEach>
             </table>  
