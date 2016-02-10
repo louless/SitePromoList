@@ -72,7 +72,6 @@ a:link:hover {
     margin-right: 0; 
     padding-right: 0;
     float: right;   
-    right: 0;
 }
 
 .left{
@@ -84,7 +83,8 @@ a:link:hover {
 .right{
     width: max-content;
     float:right;
-    margin: auto;
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 /* ///////////////////////////////////////////////////////
@@ -97,7 +97,6 @@ a:link:hover {
     margin-right: auto;
     float: left;
 }
-
 #mainmenu a {
     background-color: #949494;
     color: #fff;
@@ -111,11 +110,24 @@ a:link:hover {
     border-left: 10px solid #6c6874;
     border-bottom: 1px solid #6c6874;
 }
-
 #mainmenu a:hover {
     background-color: #666;
     border-left: 5px solid #3333FF;
 }
+/*стиль пункта с подменю*/
+/*.drop-link > a {
+  margin: 0;
+  -webkit-transition: margin 0.5s ease;
+  -moz-transition: margin 0.5s ease;
+  -o-transition: margin 0.5s ease;
+  transition: margin 0.5s ease;
+}
+.drop-link > a:hover {
+  margin: 0 0 0 10px;
+}
+.drop-link:hover {
+  background: #ccf; выделяем ссылку родитель выпадающего блока
+}*/
 
 .clear-float-left{
     clear: left;
@@ -132,14 +144,14 @@ a:link:hover {
 #topmenu {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    /*list-style-type: none;*/
     background-color: #33ADFF;
-    border: 2px solid #0066FF;
-    /* width: 550px;*/
+    border: 2px solid #0066FF;   
     /* border-radius: 20px 5px; скругленные концы */
 }
 #topmenu li { 
     display: inline; 
+    height: 100px;
 }
 #topmenu a {
     color: #fff;
@@ -148,35 +160,17 @@ a:link:hover {
     font-weight: bold;
     display: inline-block;
     width: 7%;
+    text-align: center;
 }
+#topmenu loginButton{
+    margin-right: 30px;
+    float:right;     
+}    
 
 #topmenu a:hover {
     border-radius: 20px 5px;
     background-color: #0066FF;
 }
-
-/*.topMenu-RightPart{
-    text-align: right;
-    float: right;
-    margin: auto;
-    width: 7%;
-    padding-right: 7%;
-}*/
-/*  элементы верхнего меню - черновик'
-#navbar {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  border: 2px solid #0066FF;
-  border-radius: 20px 5px;
-  width: 550px;
-  text-align: center;
-  background-color: #33ADFF;
-}
-#navbar a:hover {
-  border-radius: 20px 5px;
-  background-color: #0066FF;
-}*/
 
 /* ////////////////////////////////////////////////////////
   фон основной рамки */

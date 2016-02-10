@@ -48,8 +48,7 @@
 
                         </tr>
                         <tr>
-                            <td><s:textfield label="Ссылка" key="url"/> 
-                            </td>                        
+                            <td><s:textfield label="Ссылка" key="url"/>  </td>                        
                         </tr>
                         <tr>
                             <td><s:textfield label="Имя сайта" key="siteName"/> 

@@ -33,7 +33,16 @@
             <li value="14"> <a href="#"> Природа       </a></li>
             <li value="15"> <a href="#"> История       </a></li>
             <li value="16"> <a href="#"> Новости       </a></li>
-            <li value="17"> <a href="#"> Недвижимость  </a></li>            
+            <li value="17"> <a href="#"> Недвижимость  </a></li>  
+<!--            <li class='drop-link'><a href="#">Раздел 4</a>
+                <ul class='drop-block'>
+                    <li><a href="#">Раздел 4.1</a>
+                    <li><a href="#">Раздел 4.2</a>
+                    <li><a href="#">Раздел 4.3</a>
+                    <li><a href="#">Раздел 4.4</a>
+                    <li><a href="#">Раздел 4.5</a>
+                </ul>
+            </li>-->
         </ul> 
 
     </body>
