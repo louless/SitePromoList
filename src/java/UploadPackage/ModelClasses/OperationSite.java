@@ -11,22 +11,23 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.servlet.ServletException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.Part;
+
 
 /**
  * вставка нового элемента в базу
  *
  * @author VGLukin
  */
-public class InsertNew {
+public class OperationSite {
 
     private int idRubric;
     private String url;
     private String siteName;
     private File file;
-    private String fileName;
+    private String idSite;
 
     /**
      * вставка нового сайта
@@ -34,12 +35,12 @@ public class InsertNew {
      * @param request
      * @return result insert
      */
-    public String insertSite(HttpServletRequest request){
+    public String insertSite(HttpServletRequest request) {
         String result = "";
         String result1 = "";
         String result2 = "";
         result1 = saveToDB();
-        if (fileName == null){
+        if (idSite == null) {
             result = "file name is null";
             return result;
         }
@@ -53,6 +54,7 @@ public class InsertNew {
 
     /**
      * сохранение сайта в базу
+     *
      * @return
      */
     private String saveToDB() {
@@ -72,7 +74,7 @@ public class InsertNew {
 
             try (ResultSet rs = WorkDB.getInstance().SimpleQuery("SELECT LAST_INSERT_ID()")) {
                 while (rs.next()) {
-                    fileName = rs.getString(1);
+                    idSite = rs.getString(1);
                 }
             }
         } catch (SQLException e) {
@@ -85,14 +87,43 @@ public class InsertNew {
 
     /**
      * сохранение иконки сайта в папку
+     *
      * @return
      */
     private String saveIcon(HttpServletRequest request, File file) {
         String result = "";
         UploadFileStruts uploadFile = new UploadFileStruts();
         try {
-            result = uploadFile.load(request, file, fileName);
+            result = uploadFile.load(request, file, idSite);
         } catch (IOException e) {
+            return result;
+        }
+
+        return result;
+    }
+
+    public String DelSite() {
+        String result = "";
+        int id;
+        try {
+            id = Integer.parseInt(idSite);
+        } catch (NumberFormatException nfe) {
+            id = 0;
+        }
+
+        if (id == 0) {
+            result = "Error while parse idSite = " + idSite;
+            return result;
+        }
+        
+        try {
+            WorkDB.getInstance().setQuery("update sitelist set isactive = 0 where idsite = " + idSite);
+            WorkDB.getInstance().PrepareQueryExe();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(OperationSite.class.getName()).log(Level.SEVERE, null, ex);            
+            System.out.println(ex.getMessage());
+            result = ex.getMessage();
             return result;
         }
 
@@ -130,5 +161,15 @@ public class InsertNew {
     public void setFile(File file) {
         this.file = file;
     }
+
+    public String getIdSite() {
+        return idSite;
+    }
+
+    public void setIdSite(String idSite) {
+        this.idSite = idSite;
+    }
+    
+    
 
 }

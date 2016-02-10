@@ -29,7 +29,7 @@ public class GetData {
         String directory = UploadFileStruts.fullFilesPath;//request.getContextPath() + File.separator + UploadFileStruts.filesPath;
         sites = new ArrayList();
         try {
-            rs = WorkDB.getInstance().SimpleQuery("SELECT idsite, url, namesite FROM sitelist where idrubric = " + idrubric);
+            rs = WorkDB.getInstance().SimpleQuery("SELECT idsite, url, namesite FROM sitelist where isactive = 1 and idrubric = " + idrubric);
             while (rs.next()) {
                 Site site = new Site();
                 site.setIdSite(rs.getInt("idsite"));

@@ -17,7 +17,11 @@
                 <param name="fileUpload.maximumSize">10485760</param>
                 <param name="fileUpload.allowedTypes">text/plain,image/jpeg</param>
             </interceptor-ref>
-        </action>   
+        </action> 
+        <action name="delSite" class="UploadPackage.Actions.InsertNewAction" method="doDelSite">
+            <result name="admin">/jsps/admin.jsp</result>
+        </action>  
+            
         
         <action name="siteList" class="GetDataPackage.Actions.GetDataAction" method="getSiteList">
             <result name="center">/partjsp/center.jsp</result>
@@ -25,7 +29,7 @@
 
         <action name="siteListEdit" class="GetDataPackage.Actions.GetDataAction" method="getSiteEdit">
             <result name="editSite">/partjsp/editSite.jsp</result>
-        </action>        
+        </action>                              
                         
         <action name="getImage" class="GetDataPackage.ModelClasses.GetImage">
             <result name="success" type="stream">

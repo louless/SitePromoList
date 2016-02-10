@@ -5,7 +5,7 @@
  */
 package UploadPackage.Actions;
 
-import UploadPackage.ModelClasses.InsertNew;
+import UploadPackage.ModelClasses.OperationSite;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import javax.servlet.http.HttpServletRequest;
@@ -15,12 +15,12 @@ import org.apache.struts2.interceptor.ServletRequestAware;
  *
  * @author VGLukin
  */
-public class InsertNewAction extends ActionSupport implements ModelDriven<InsertNew>, ServletRequestAware {
+public class InsertNewAction extends ActionSupport implements ModelDriven<OperationSite>, ServletRequestAware {
 
     HttpServletRequest request;
-    private final InsertNew insertNew = new InsertNew();
+    private final OperationSite operSite = new OperationSite();
     public static final String ADMIN = "admin";
-    String resultInsert;
+    String result;
 
     /**
      * запись нового сайта: урл в базу и картинку в файл
@@ -30,18 +30,25 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
      */
     @Override
     public String execute() {
-        resultInsert = "";
+        result = "";
 
         System.out.println("idRubric=" + request.getParameter("idRubric"));
         System.out.println("url=" + request.getParameter("url"));
-        System.out.println("Site name=" + request.getParameter("siteName"));
-        resultInsert = insertNew.insertSite(request);
+        System.out.println("Site name=" + request.getParameter("siteName"));       
+        result = operSite.insertSite(request);
         return ADMIN;
     }
 
+    public String doDelSite(){
+        System.out.println("id site =" + request.getParameter("idSite"));    
+        result = operSite.DelSite();
+              
+        return ADMIN;
+    }
+    
     @Override
-    public InsertNew getModel() {
-        return insertNew;
+    public OperationSite getModel() {
+        return operSite;
     }
 
     public HttpServletRequest getServletRequest() {
@@ -53,12 +60,12 @@ public class InsertNewAction extends ActionSupport implements ModelDriven<Insert
         this.request = request;
     }
 
-    public String getResultInsert() {
-        return resultInsert;
+    public String getResult() {
+        return result;
     }
 
-    public void setResultInsert(String resultInsert) {
-        this.resultInsert = resultInsert;
+    public void setResultInsert(String result) {
+        this.result = result;
     }
 
 }

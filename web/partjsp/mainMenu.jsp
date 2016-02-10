@@ -35,9 +35,6 @@
             <li value="16"> <a href="#"> Новости       </a></li>
             <li value="17"> <a href="#"> Недвижимость  </a></li>            
         </ul> 
-        <!--            <input type="submit" >
-                </form>-->
-
 
     </body>
 </html>

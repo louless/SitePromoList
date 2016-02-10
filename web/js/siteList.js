@@ -17,7 +17,7 @@ $(function () {
         return false;
     });
    
-    $('#idRubric').change(function () {
+    $('#Rubric').change(function () {
         $.ajax({
             type: 'POST',
             url: "siteListEdit",

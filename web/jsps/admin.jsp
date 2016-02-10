@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
         <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
-        <title>Welcome for you!</title>
+        <title>Sitez.site | Welcome for you!</title>
     </head>
     <body>
         <div class="mainframe">
@@ -31,7 +31,7 @@
                         <tr>
                             <td>
                                 <strong>Рубрика:</strong>
-                                <select required key="idRubric" name="idRubric" >
+                                <select key="idRubric" name="idRubric" id="Rubric" required>
                                     <c:forEach var="row" items="${rubrics.rows}" >
                                         <option 
                                             <c:if test="${param.idRubric == row.idRubric}" > 
@@ -43,7 +43,7 @@
                                 </select>  
                             </td>  
                             <td>
-                                <div class="content_sitelist"> </div>
+                               
                             </td>
 
                         </tr>
@@ -66,10 +66,10 @@
                             </td> 
                         </tr>               
                     </tbody>                
-                </table> 
-
-            </s:form>     
-            <s:property value="resultInsert" default="" />                              
+                </table>                             
+            </s:form>  
+             <div id="content_sitelist"> </div>
+            <s:property value="result" default="" />                              
 
             <%@include file="../partjsp/bottom.jsp"%> 
         </div>

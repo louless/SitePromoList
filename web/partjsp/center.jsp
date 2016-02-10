@@ -8,7 +8,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
@@ -20,8 +19,6 @@
     </head>
     <body>
         <div class="center">
-
-
             <table>
                 <c:forEach var="site" items="${sites}">
                     <tr>
@@ -30,7 +27,6 @@
                     </tr>
                 </c:forEach>
             </table>  
-
         </div>
 
     </body>

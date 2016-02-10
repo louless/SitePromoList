@@ -38,38 +38,34 @@
                         <s:submit value="админ"/>
                     </s:form>
                 </div> 
-            <div class="clear-float"></div>
+                <div class="clear-float"></div>
             </div>
-
-            <p>  <jsp:text> У нас самые популярные 
-                    сайты в интернете, разбитые по категориям для удобства на любой вкус!
-                </jsp:text>
-            </p>    
-
 
             <div class="promo-box-left">
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
             </div>
-
-            <%@include file="../partjsp/mainMenu.jsp"%>              
-
-            </br>
+            <h1>
+                Самые популярные  сайты в интернете, разбитые по категориям для удобства на любой вкус!
+            </h1>                  
+            <div class="clear-float-left"></div>
             <div class="promo-box-right">
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />
-            </div>            
+            </div>  
 
-            <!--ajax-->
-            <div id="content_center"> </div> 
+            <%@include file="../partjsp/mainMenu.jsp"%>    
 
 
+            <div id="content_center" > </div> 
             <div class="clear-float-left"></div>
+
 
             <div class="promo-box-left">
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
-            </div>        
+            </div>
 
 
 
+            <div class="clear-float"></div>
             <%@include file="../partjsp/bottom.jsp"%>           
         </div>
 
