@@ -142,30 +142,24 @@ a:link:hover {
 /* ///////////////////////////////////////////////////////
   настройки верхнего горизонтального меню*/
 #topmenu {
-    margin: 0;
     padding: 0;
     /*list-style-type: none;*/
     background-color: #33ADFF;
-    border: 2px solid #0066FF;   
+    border: 2px solid #0066FF;  
     /* border-radius: 20px 5px; скругленные концы */
 }
+
 #topmenu li { 
     display: inline; 
-    height: 100px;
 }
-#topmenu a {
+#topmenu a{
     color: #fff;
     padding: 5px 10px;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    width: 7%;
     text-align: center;
-}
-#topmenu loginButton{
-    margin-right: 30px;
-    float:right;     
-}    
+} 
 
 #topmenu a:hover {
     border-radius: 20px 5px;

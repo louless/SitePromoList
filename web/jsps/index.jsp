@@ -19,11 +19,6 @@
 
             <div class="right">
                 <div class="right">   
-                    <s:form action="login">
-                        <s:submit value="Войти"/>
-                    </s:form>
-                </div> 
-                <div class="right">   
                     <s:form action="testDB">
                         <s:submit value="Тест соединения"/>
                     </s:form>  

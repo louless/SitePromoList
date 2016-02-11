@@ -13,15 +13,20 @@
     </head>
     <body> 
         <div class="mainframe">
+
             <ul id="topmenu">
                 <li> <a href="${pageContext.request.contextPath}/jsps/index.jsp">Главная</a> </li>
                 <li> <a href="${pageContext.request.contextPath}/jsps/news.jsp">Новости</a> </li>
                 <li> <a href="${pageContext.request.contextPath}/jsps/aboutUs.jsp">О проекте</a> </li> 
-                <div style="float: right;">
-                <li id="loginButton"> <a href="${pageContext.request.contextPath}/jsps/login.jsp">Войти</a> </li>   
+                <div class="right">
+                    <li > <a style="width: 50px;" href="${pageContext.request.contextPath}/jsps/login.jsp">Войти</a> </li> 
                 </div>
-                <div class="clear-float"></div>
             </ul>
-        </div>        
+
+            
+                  
+            
+
+        </div>         
     </body>
 </html>
