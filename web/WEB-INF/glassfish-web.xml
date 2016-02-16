@@ -3,15 +3,8 @@
 <glassfish-web-app error-url="">
   <context-root>/PList</context-root>
   <resource-ref>
-    <res-ref-name>jdbc/plisttest</res-ref-name>
-    <jndi-name>jdbc/plisttest</jndi-name>
-    <default-resource-principal>
-      <name>root</name>
-      <password>3difficul1</password>
-    </default-resource-principal>
-  </resource-ref>
-  <resource-ref>
     <res-ref-name>jdbc/userdb</res-ref-name>
+    <jndi-name>jdbc/userdb</jndi-name>
   </resource-ref>
   <class-loader delegate="true"/>
   <jsp-config>

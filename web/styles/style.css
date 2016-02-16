@@ -93,41 +93,58 @@ a:link:hover {
     padding: 0;
     list-style-type: none;
     width: 15%;
+    background-color: #949494;
     margin-left: 10px;
     margin-right: auto;
-    float: left;
+    float: left;  
 }
-#mainmenu a {
-    background-color: #949494;
-    color: #fff;
+#mainmenu li {
+    position: relative;
+    border-left: 10px solid #6c6874;
+    border-bottom: 1px solid #6c6874;
+}
+#mainmenu a {    
     padding: 5px;
     text-decoration: none;
     font-weight: bold;
     border-left: 5px solid #33ADFF;
     display: block;
+    color: #fff;
 }
-#mainmenu li {
-    border-left: 10px solid #6c6874;
-    border-bottom: 1px solid #6c6874;
-}
-#mainmenu a:hover {
-    background-color: #666;
+#mainmenu a:hover{
+    background-color: #333333;
     border-left: 5px solid #3333FF;
 }
-/*стиль пункта с подменю*/
-/*.drop-link > a {
-  margin: 0;
-  -webkit-transition: margin 0.5s ease;
-  -moz-transition: margin 0.5s ease;
-  -o-transition: margin 0.5s ease;
-  transition: margin 0.5s ease;
+#mainmenu li:hover ul {
+   display: block; 
 }
-.drop-link > a:hover {
-  margin: 0 0 0 10px;
+/* выпадающий список главного меню*/
+#mainmenusub {
+    padding: 0;
+    position: absolute; 
+    display: none; 
+    top: -10px; 
+    list-style-type: none;
+    /*margin-left: 20%;*/ 
+    padding-left: 100%;
+    width: 100%;
 }
-.drop-link:hover {
-  background: #ccf; выделяем ссылку родитель выпадающего блока
-}*/
+#mainmenusub li {
+  text-align: left;
+  background: #949494;
+  padding: 0;
+}
+#mainmenusub li:hover {
+  background: #333333;
+}
+#mainmenusub li a:hover{
+  border-left: none;
+}
+#mainmenusub a{
+  border-left: none;    
+}
+
+/*///////////////////////////////////////////////////////*/
 
 .clear-float-left{
     clear: left;
