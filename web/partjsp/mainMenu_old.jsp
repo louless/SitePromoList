@@ -21,8 +21,8 @@
             <li value="2">  <a href="#"> Кино          </a></li>
             <li value="3">  <a href="#"> Магазины   
                     <ul id="mainmenusub">
-                        <li value="18"> <a href="#"> Бытовая техника </a></li>
-                        <li value="19"> <a href="#"> Косметика       </a></li>
+                        <li value="19"> <a href="#"> Бытовая техника </a></li>
+                        <li value="18"> <a href="#"> Косметика       </a></li>
                         <li value="20"> <a href="#"> Электроника     </a></li>
                         <li value="21"> <a href="#"> Украшения       </a></li>
                     </ul>
