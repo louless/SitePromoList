@@ -15,19 +15,17 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
     </head>
     <body>
-        <!--<form action="siteList" >-->
         <ul id="mainmenu"> 
             <li value="1">  <a href="#"> Спорт         </a></li>
             <li value="2">  <a href="#"> Кино          </a></li>
-            <li value="3">  <a href="#"> Магазины   
-                    <ul id="mainmenusub">
-                        <li value="18"> <a href="#"> Бытовая техника </a></li>
-                        <li value="19"> <a href="#"> Косметика       </a></li>
-                        <li value="20"> <a href="#"> Электроника     </a></li>
-                        <li value="21"> <a href="#"> Украшения       </a></li>
-                    </ul>
-                </a>
-            </li>           
+            <li value="3">  <a href="#"> Магазины      </a></li> 
+            <div class="mainmenusub">
+                <li value="18"> <a href="#"> Бытовая техника </a></li>
+                <li value="19"> <a href="#"> Косметика       </a></li>
+                <li value="20"> <a href="#"> Электроника     </a></li>
+                <li value="21"> <a href="#"> Украшения       </a></li>
+            </div>
+
             <li value="4">  <a href="#"> Искусство     </a></li>
             <li value="5">  <a href="#"> Хай-тек       </a></li>
             <li value="6">  <a href="#"> Наука         </a></li>
@@ -43,6 +41,8 @@
             <li value="16"> <a href="#"> Новости       </a></li>
             <li value="17"> <a href="#"> Недвижимость  </a></li>  
         </ul> 
+
+
 
     </body>
 </html>

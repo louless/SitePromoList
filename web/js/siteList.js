@@ -16,7 +16,7 @@ $(function () {
         });
         return false;
     });
-   
+
     $('#Rubric').change(function () {
         $.ajax({
             type: 'POST',
@@ -27,7 +27,16 @@ $(function () {
             }
         });
         return false;
-    });    
-    
+    });
+
+    $('#mainmenu li').click(function () {
+        $(this).next('.mainmenusub').slideToggle();
+        $(this).toggleClass('open');
+    });
+
 });
+
+
+
+
 

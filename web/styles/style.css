@@ -115,35 +115,43 @@ a:link:hover {
     background-color: #333333;
     border-left: 5px solid #3333FF;
 }
-#mainmenu li:hover ul {
-   display: block; 
+.mainmenusub{
+    display: none;
+    background-color: #5d5656;
 }
+.mainmenusub a{
+    /*margin-left: 10px;*/  
+    text-align: right;
+}
+
+/*#mainmenu li:hover ul {
+   display: block; 
+}*/
 /* выпадающий список главного меню*/
-#mainmenusub {
+/*.mainmenusub {
     padding: 0;
     position: absolute; 
     display: none; 
     top: -10px; 
     list-style-type: none;
-    /*margin-left: 20%;*/ 
-    padding-left: 100%;
+    margin-left: 100%;
     width: 100%;
 }
-#mainmenusub li {
+.mainmenusub li {
   text-align: left;
   background: #949494;
   padding: 0;
   background-color: #009999;
 }
-#mainmenusub li:hover {
+.mainmenusub li:hover {
   background: #333333;
 }
-#mainmenusub li a:hover{
+.mainmenusub li a:hover{
   border-left: none;
 }
-#mainmenusub a{
+.mainmenusub a{
   border-left: none;    
-}
+}*/
 
 /*///////////////////////////////////////////////////////*/
 
