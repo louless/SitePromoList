@@ -29,7 +29,7 @@
                     </s:form>
                 </div>    
                 <div class="right">       
-                    <s:form action="admin">
+                    <s:form action="validate">
                         <s:submit value="админ"/>
                     </s:form>
                 </div> 

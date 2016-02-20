@@ -4,7 +4,7 @@
 
 <struts>
     <include file="struts-upload.xml"/>
-    <include file="struts-private.xml"/>
+    <!--<include file="struts-private.xml"/>-->
     
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default" namespace="/public">       
@@ -21,8 +21,13 @@
         </action>   
         <action name="testJQuery">
             <result>/jsps/testJQuery.jsp</result>
-        </action>         
-                                  
+        </action>  
+        
+        <action name="validate" class="LoginPackage.Actions.LoginAction" method="validateUser">
+            <result name="login">/jsps/login.jsp</result>
+            <result name="admin">/private/jsps/admin.jsp</result>
+        </action>     
+                                                                                   
     </package>
     
 
