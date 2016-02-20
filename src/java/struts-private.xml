@@ -1,0 +1,13 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: VGLukin -->
+ 
+<struts>
+    <package name="private" extends="struts-default" namespace="/private">
+        <action name="admin">
+            <result>/jsps/admin.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -4,17 +4,15 @@
 
 <struts>
     <include file="struts-upload.xml"/>
+    <include file="struts-private.xml"/>
     
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default">       
+    <package name="default" extends="struts-default" namespace="/public">       
         <action name="LoginForm" class="LoginPackage.Actions.LoginAction" >
             <result name="success">/jsps/success.jsp</result>
             <result name="login">/jsps/login.jsp</result>      
         </action>    
         
-        <action name="admin">
-            <result>/jsps/admin.jsp</result>
-        </action>
         <action name="login">
             <result>/jsps/login.jsp</result>
         </action>
