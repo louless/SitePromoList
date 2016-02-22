@@ -19,7 +19,7 @@
             <li value="1">  <a href="#"> Спорт         </a></li>
             <li value="2">  <a href="#"> Кино          </a></li>
             <li value="3">  <a href="#"> Магазины      </a>
-                <img src="${pageContext.request.contextPath}/images/down.png" />
+                <!--<img src="${pageContext.request.contextPath}/images/down.png" />-->
             </li> 
             <div class="mainmenusub">
                 <li value="18"> <a href="#"> Бытовая техника </a></li>
