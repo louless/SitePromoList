@@ -9,6 +9,7 @@ import LoginPackage.ModelClasses.User;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import java.util.Map;
+import javax.servlet.http.HttpSession;
 import org.apache.struts2.interceptor.SessionAware;
 
 /**
@@ -45,13 +46,15 @@ public class LoginAction extends ActionSupport implements ModelDriven<CheckLogin
      * @return
      */
     public String validateUser() {
+        if (session == null){
+            System.out.println("session object is null");
+        }
         User userTmp = (User) session.get("user");
         if ((userTmp != null) && (userTmp.getUserID() != 0)) {
             return ADMIN;
         } else {
             return LOGIN;
         }
-
     }
 
     @Override
