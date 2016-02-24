@@ -46,7 +46,7 @@ public class LoginAction extends ActionSupport implements ModelDriven<CheckLogin
      */
     public String validateUser() {
         User userTmp = (User) session.get("user");
-        if (userTmp.getUserID() != 0) {
+        if ((userTmp != null) && (userTmp.getUserID() != 0)) {
             return ADMIN;
         } else {
             return LOGIN;

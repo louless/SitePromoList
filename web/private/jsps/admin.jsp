@@ -23,7 +23,7 @@
     </head>
     <body>
         <div class="mainframe">
-            <%@include file="../partjsp/topmenu.jsp" %>        
+            <%@include file="../../partjsp/topmenu.jsp" %>        
 
             <s:form name="insertNew" action="insertNewForm" enctype="multipart/form-data" method="post">                
                 <table >
@@ -70,7 +70,7 @@
              <div id="content_sitelist"> </div>
             <s:property value="result" default="" />                              
 
-            <%@include file="../partjsp/bottom.jsp"%> 
+            <%@include file="../../partjsp/bottom.jsp"%> 
         </div>
     </body>
 </html>

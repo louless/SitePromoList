@@ -7,7 +7,7 @@
     <!--<include file="struts-private.xml"/>-->
     
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default" namespace="/public">       
+    <package name="default" extends="struts-default">       
         <action name="LoginForm" class="LoginPackage.Actions.LoginAction" >
             <result name="success">/jsps/success.jsp</result>
             <result name="login">/jsps/login.jsp</result>      

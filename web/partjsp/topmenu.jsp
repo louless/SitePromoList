@@ -19,7 +19,7 @@
                 <li> <a href="${pageContext.request.contextPath}/jsps/news.jsp">Новости</a> </li>
                 <li> <a href="${pageContext.request.contextPath}/jsps/aboutUs.jsp">О проекте</a> </li> 
                 <div class="right">
-                    <li > <a style="width: 50px;" href="${pageContext.request.contextPath}/public/jsps/login.jsp">Войти</a> </li> 
+                    <li > <a style="width: 50px;" href="${pageContext.request.contextPath}/jsps/login.jsp">Войти</a> </li> 
                 </div>
             </ul>
 
