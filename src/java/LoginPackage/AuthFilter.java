@@ -17,6 +17,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import other.ConstClass;
 
 /**
  *
@@ -35,17 +36,21 @@ public class AuthFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        System.out.println("AuthFilter.doFilter is execute");
+        System.out.println("AuthFilter.doFilter is execute: page from private zone is called.");
         HttpSession session = ((HttpServletRequest) request).getSession();
         boolean result = validateUser(session);
 
-        if (!result) {
+        if (result) {
+            chain.doFilter(request, response);  // вызываем следующий фильтр
+        }else{
             // Мы не можем вызвать response.sendRedirect("login.jsp"),
             // так как нам нужен httpResponse, а не ServletResponse.
             HttpServletResponse httpResponse = (HttpServletResponse) response;
-            httpResponse.sendRedirect("/jsps/login.jsp");
-        } else {
-            chain.doFilter(request, response);  // вызываем следующий фильтр. В этом примере нам это не понадобится.
+        //    System.err.println("Access denied: Authfilter redurect you to URL:");
+         //   System.out.println(request.getServletContext().getContextPath() + "/jsps/login.jsp");
+            //httpResponse.sendRedirect(request.getServletContext().getContextPath() + "jsps/login.jsp");   
+            HttpServletRequest httpRequest = (HttpServletRequest) request;
+            httpRequest.getRequestDispatcher(ConstClass.LOGIN).forward(request, response);
         }
     }
 

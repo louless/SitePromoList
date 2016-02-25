@@ -23,8 +23,11 @@
         </action>   
         <action name="testJQuery">
             <result>/jsps/testJQuery.jsp</result>
+        </action>        
+        <action name="admin">
+            <result>/private/jsps/admin.jsp</result>
         </action>  
-     
+             
         <action name="validate" class="LoginPackage.Actions.LoginAction" method="validateUser">
             <result name="login">/jsps/login.jsp</result>
             <result name="admin">/private/jsps/admin.jsp</result>

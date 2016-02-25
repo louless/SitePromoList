@@ -34,6 +34,7 @@
                     </s:form>
                 </div> 
                 <div class="clear-float"></div>
+                <a href="${pageContext.request.contextPath}/private/jsps/admin.jsp">прямой админ</a> 
             </div>
 
             <div class="promo-box-left">
