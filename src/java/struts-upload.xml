@@ -11,7 +11,7 @@
     <package name="strutsUpload" extends="struts-default">
         <action name="insertNewForm" class="UploadPackage.Actions.InsertNewAction">
             <!--<param name="filesPath">myfiles</param>-->
-            <result name="admin">/jsps/admin.jsp</result>  
+            <result name="admin">/private/jsps/admin.jsp</result>  
  
             <interceptor-ref name="defaultStack">
                 <param name="fileUpload.maximumSize">10485760</param>
