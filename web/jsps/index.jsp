@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
-        <title>Welcome for you!</title>
+        <title>Sitez.site|Лучшие сайты</title>
     </head>
     <body>        
         <div class="mainframe">
@@ -40,7 +40,7 @@
                 <img src="${pageContext.request.contextPath}/images/promo1.bmp" />                     
             </div>
             <h1>
-                Самые популярные  сайты в интернете, разбитые по категориям для удобства на любой вкус!
+                Самые популярные сайты в интернете, разбитые по категориям для удобства на любой вкус!
             </h1>                  
             <div class="clear-float-left"></div>
             <div class="promo-box-right">
