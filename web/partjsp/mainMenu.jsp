@@ -9,9 +9,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <body>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>        
+    <body> 
+    <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>    
         <ul id="mainmenu"> 
             <li value="1">  <a href="#"> Спорт         </a></li>
             <li value="2">  <a href="#"> Кино          </a></li>
