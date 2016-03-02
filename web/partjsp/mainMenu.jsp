@@ -9,12 +9,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">                
-    </head>   
-    <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
     <body>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>        
         <ul id="mainmenu"> 
             <li value="1">  <a href="#"> Спорт         </a></li>
             <li value="2">  <a href="#"> Кино          </a></li>
@@ -43,8 +40,5 @@
             <li value="16"> <a href="#"> Новости       </a></li>
             <li value="17"> <a href="#"> Недвижимость  </a></li>  
         </ul> 
-
-
-
     </body>
 </html>
