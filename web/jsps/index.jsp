@@ -10,7 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
-        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
         <title>Welcome for you!</title>
     </head>
     <body>        

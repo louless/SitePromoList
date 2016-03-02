@@ -10,10 +10,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
-    </head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">                
+    </head>   
+    <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>
     <body>
         <ul id="mainmenu"> 
             <li value="1">  <a href="#"> Спорт         </a></li>
