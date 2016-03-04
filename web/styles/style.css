@@ -11,9 +11,10 @@ and open the template in the editor.
 body {
     font-family: Verdana, Arial, sans-serif;
     font-size: small;
-    margin: 10px;
+    margin: 0;
+    /*padding: 0;*/
     color: #555; 
-    background-color: #c5e7e0;
+    background-color: #06d2f2;
 }
 
 h1 {
@@ -171,7 +172,7 @@ a:link:hover {
     padding: 0;
     /*list-style-type: none;*/
     background-color: #33ADFF;
-    border: 2px solid #0066FF;  
+    /*border: 2px solid #0066FF;*/  
     /* border-radius: 20px 5px; скругленные концы */
 }
 
@@ -195,7 +196,7 @@ a:link:hover {
 /* ////////////////////////////////////////////////////////
   фон основной рамки */
 .mainframe{    
-    background-color: #ace5ee;  
+    background-color: #dffafa;  
 }
 
 /* ////////////////////////////////////////////////////////

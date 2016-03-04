@@ -10,23 +10,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
-        <title>Sitez.site|Лучшие сайты</title>
+        <title>Sitez.site | Лучшие сайты</title>
     </head>
     <body>        
         <div class="mainframe">
             <%@include file="../partjsp/topmenu.jsp" %>
 
             <div class="right">
-                <div class="right">   
-                    <s:form action="testDB">
-                        <s:submit value="Тест соединения"/>
-                    </s:form>  
+<!--                <div class="right">   
+                    <%--<s:form action="testDB">--%>
+                        <%--<s:submit value="Тест соединения"/>--%>
+                    <%--</s:form>--%>  
                 </div> 
                 <div class="right">       
-                    <s:form action="testJQuery">
-                        <s:submit value="Тест JQuery"/>
-                    </s:form>
-                </div>    
+                    <%--<s:form action="testJQuery">--%>
+                        <%--<s:submit value="Тест JQuery"/>--%>
+                    <%--</s:form>--%>
+                </div>    -->
                 <div class="right">       
                     <s:form action="validate">
                         <s:submit value="админ"/>
