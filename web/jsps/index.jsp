@@ -63,6 +63,8 @@
             <div class="clear-float"></div>
             <%@include file="../partjsp/bottom.jsp"%>           
         </div>
-           
+
+        <script type="text/javascript" src="${pageContext.request.contextPath}/lib/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/siteList.js"></script>  
     </body>
 </html>
