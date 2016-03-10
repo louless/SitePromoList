@@ -32,7 +32,8 @@ public class WorkDB {
             try {
                 pstmt = con.prepareStatement(query);
             } catch (SQLException sqle) {
-                System.out.println("Exception while preparing query");
+                System.out.println("Exception while preparing query:" + query);
+                System.out.println("Text exception:" + sqle.getMessage());
             }
         }
 
