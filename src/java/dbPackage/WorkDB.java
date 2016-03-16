@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -19,6 +20,7 @@ import javax.sql.DataSource;
  * @author Владимир
  */
 public class WorkDB {
+
     String ConPullName = "jdbc/userdb";
     DataSource ds;
     Connection con;
@@ -39,10 +41,10 @@ public class WorkDB {
 
     }
 
-    private WorkDB(){
-        try{
-        this.ds = InitialContext.doLookup(ConPullName);
-        }catch(NamingException ne){
+    private WorkDB() {
+        try {
+            this.ds = InitialContext.doLookup(ConPullName);
+        } catch (NamingException ne) {
             System.out.println("Exception while get Connection Pool");
             System.out.println(ne.getMessage());
         }
@@ -59,33 +61,35 @@ public class WorkDB {
     }
 
     public static WorkDB getInstance() {
-        return WorkDBHolder.INSTANCE;
+        //   return WorkDBHolder.INSTANCE;
+        WorkDB work = new WorkDB();
+        return work;
     }
 
-    private static class WorkDBHolder {
-        private static final WorkDB INSTANCE = new WorkDB();
+//    private static class WorkDBHolder {
+//        private static final WorkDB INSTANCE = new WorkDB();
+//
+//}
 
-}
-
-/* заранее подготовленный запрос (для Insert, Update..)*/
-public void PrepareQueryExe() throws SQLException{        
+    /* заранее подготовленный запрос (для Insert, Update..)*/
+    public void PrepareQueryExe() throws SQLException {
         pstmt.executeUpdate();
     }
 
     /*простой запрос к БД*/
     public ResultSet SimpleQuery(String query) throws SQLException {
-        setQuery(query); // организация подключения к базе и опред-е команды.
+        Statement st;
+        st = con.createStatement();
+        // setQuery(query); // организация подключения к базе и опред-е команды.
         ResultSet rs = null;
-        if (pstmt != null){                    
-            rs = pstmt.executeQuery();
-        }
+        rs = st.executeQuery(query);
+        con.close();
         return rs;
     }
-    
-        
+
     public Connection getCon() {
         return con;
-    }    
+    }
 
     public PreparedStatement getPstmt() {
         return pstmt;
