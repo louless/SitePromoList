@@ -170,6 +170,7 @@ a:link:hover {
   настройки верхнего горизонтального меню*/
 #topmenu {
     padding: 0;
+    margin-top: 0;
     /*list-style-type: none;*/
     background-color: #33ADFF;
     /*border: 2px solid #0066FF;*/  
