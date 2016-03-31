@@ -11,7 +11,7 @@ and open the template in the editor.
 body {
     font-family: Verdana, Arial, sans-serif;
     font-size: small;
-    margin: 0;
+    margin: auto;
     /*padding: 0;*/
     color: #555; 
     background-color: #06d2f2;
@@ -198,6 +198,8 @@ a:link:hover {
   фон основной рамки */
 .mainframe{    
     background-color: #dffafa;  
+    /*width: 1200px;*/
+    margin: auto;
 }
 
 /* ////////////////////////////////////////////////////////
